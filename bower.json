@@ -1,6 +1,6 @@
 {
-  "name": "Centagon Primer",
-  "description": "",
+  "name": "centagon-primer",
+  "description": "Commenly utilities used by Centagon for Zurb Foundation",
   "main": [],
   "dependencies": {
     "foundation-sites": "6.2.*"
@@ -10,9 +10,16 @@
     "foundation"
   ],
   "authors": [
-    "Jelle Spekken <jelle.spekken@centagon.com>"
+    "Jelle Spekken <jelle@centagon.com>",
+    "Joeri Kassenaar <joeri@centagon.com>",
+    "Rene Heijnemans <rene@centagon.com>"
   ],
   "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "src/components",
+    "npm-debug.log"
+  ],
   "moduleType": [],
-  "homepage": ""
+  "homepage": "https://github.com/centagon/primer"
 }
