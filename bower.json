@@ -1,6 +1,6 @@
 {
   "name": "centagon-primer",
-  "description": "Commenly utilities used by Centagon for Zurb Foundation",
+  "description": "Commonly utilities used by Centagon for Zurb Foundation",
   "main": [],
   "dependencies": {
     "foundation-sites": "6.2.*"
