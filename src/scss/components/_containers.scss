@@ -1,0 +1,24 @@
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+// The main website wrapper.
+div#main-container {
+    position: relative;
+    margin: 0 auto;
+
+    @if $main-container-limit != false {
+        max-width: $main-container-limit;
+    }
+}
+
+// Padded container
+.container {
+    padding-top: $global-padding * 2;
+    padding-bottom: $global-padding * 2;
+}
