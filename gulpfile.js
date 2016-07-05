@@ -1,26 +1,28 @@
-var gulp       = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var source     = require('vinyl-source-stream');
-var buffer     = require('vinyl-buffer');
-var browserify = require('browserify');
-var watchify   = require('watchify');
-var babel      = require('babelify');
-var uglify     = require('gulp-uglify');
-var rename     = require('gulp-rename');
-var sass       = require('gulp-sass');
-var prefixer   = require('gulp-autoprefixer');
-var cleancss   = require('gulp-clean-css');
+/* eslint no-console: "off" */
+const gulp = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
+const source = require('vinyl-source-stream');
+const browserify = require('browserify');
+const buffer = require('vinyl-buffer');
+const babel = require('babelify');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const prefixer = require('gulp-autoprefixer');
+const cleancss = require('gulp-clean-css');
 
 /**
  *
  */
-gulp.task('javascript:compile', () => {
-    var bundler = browserify('./src/js/primer.js', {
+gulp.task('js:compile', () => {
+    const bundler = browserify('./src/js/primer.js', {
         debug: true
     }).transform(babel);
 
     return bundler.bundle()
-        .on('error', (err) => {})
+        .on('error', (err) => {
+            console.log(err);
+        })
         .pipe(source('primer.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({
@@ -33,18 +35,18 @@ gulp.task('javascript:compile', () => {
 /**
  *
  */
-gulp.task('javascript:uglify', () => {
-    return gulp.src('dist/js/primer.js')
+gulp.task('js:uglify', () =>
+    gulp.src('dist/js/primer.js')
         .pipe(uglify())
         .pipe(rename('primer.min.js'))
-        .pipe(gulp.dest('dist/js/'));
-});
+        .pipe(gulp.dest('dist/js/'))
+);
 
 /**
  *
  */
-gulp.task('sass:compile', () => {
-    return gulp.src('./src/scss/**/*.scss')
+gulp.task('sass:compile', () =>
+    gulp.src('./src/scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(prefixer({
@@ -52,15 +54,15 @@ gulp.task('sass:compile', () => {
             cascade: false
         }))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./dist/css'));
-});
+        .pipe(gulp.dest('./dist/css'))
+);
 
 /**
  *
  */
-gulp.task('sass:minify', () => {
-    return gulp.src('./dist/css/primer.css')
+gulp.task('sass:minify', () =>
+    gulp.src('./dist/css/primer.css')
         .pipe(cleancss())
         .pipe(rename('primer.min.css'))
-        .pipe(gulp.dest('./dist/css'));
-});
+        .pipe(gulp.dest('./dist/css'))
+);
