@@ -276,9 +276,9 @@ var Scroll = function () {
             onAfterThreshold: function onAfterThreshold() {}
         }, options);
 
-        window.onscroll = function () {
+        window.addEventListener('scroll', function () {
             return _this.onScrollCallback();
-        };
+        });
     }
 
     /**

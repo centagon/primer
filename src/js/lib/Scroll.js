@@ -23,7 +23,7 @@ export default class Scroll {
             onAfterThreshold: () => {}
         }, options);
 
-        window.onscroll = () => this.onScrollCallback();
+        window.addEventListener('scroll', () => this.onScrollCallback());
     }
 
     /**
