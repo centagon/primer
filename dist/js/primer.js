@@ -28,7 +28,8 @@ var _class = function () {
 
 
     /**
-     *
+     * Register the external link handler so that we can
+     * use rel[external] instead of target=_blank.
      */
     value: function registerExternals() {
       var anchors = document.querySelectorAll('a[rel~=external]');
