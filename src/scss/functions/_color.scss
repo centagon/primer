@@ -8,5 +8,10 @@
  */
 
 @function color-get($color) {
-    @return map-get($colors, $color);
+    @if (map-has_key($colors, $color)) {
+        @return map-get($colors, $color);
+    }
+
+    @warn "Unknown color `#{$color}`!";
+    @return null;
 }
