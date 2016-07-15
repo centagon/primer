@@ -1234,7 +1234,7 @@ button {
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-div#main-container {
+.main-container {
   position: relative;
   margin: 0 auto;
   max-width: 93.75rem; }

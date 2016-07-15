@@ -8,7 +8,7 @@
  */
 
 @function color-get($color) {
-    @if (map-has_key($colors, $color)) {
+    @if (map-has-key($colors, $color)) {
         @return map-get($colors, $color);
     }
 
