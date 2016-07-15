@@ -14,7 +14,7 @@ $ bower install centagon-primer
 
 ## Contributing
 
-Have a bug? Please create an issue here on GitHub that conforms with [necolas's guidelines](https://github.com/necolas/issue-guidelines). You can also browse the [Help Wanted](https://github.com/centagon/primer/labels/help%20wanted) tag in our issue tracker to find things to do.
+Have a bug? Please create an issue here on GitHub that conforms with [our contributing guidelines](https://github.com/centagon/guidelines/blob/master/contributing.md). You can also browse the [Help Wanted](https://github.com/centagon/primer/labels/help%20wanted) tag in our issue tracker to find things to do.
 
 ## License
 
