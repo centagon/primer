@@ -245,14 +245,16 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * This file is part of the Centagon Primer package.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * (c) Centagon <contact@centagon.com>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * For the full copyright and license information, please view the LICENSE
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * file that was distributed with this source code.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* global $ */
+/* global jQuery */
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 var _Util = require('./Util');
 
@@ -312,12 +314,35 @@ var Scroll = function () {
         }
 
         /**
+         * Scroll to a certain position in the document.
+         *
+         * @param  {*}       offset
+         * @param  {Number}  speed
+         */
+
+    }], [{
+        key: 'to',
+        value: function to(offset) {
+            var speed = arguments.length <= 1 || arguments[1] === undefined ? 250 : arguments[1];
+
+            if (typeof offset === 'string') {
+                // Did we pass in a selector string?
+                offset = document.querySelector(offset).offsetTop;
+            } else if (offset instanceof jQuery) {
+                // Did we pass a jQuery object
+                offset = offset.offset().top;
+            }
+
+            $('body, html').animate({ scrollTop: offset }, speed);
+        }
+
+        /**
          * Get the current scroll position.
          *
          * @returns {number}
          */
 
-    }], [{
+    }, {
         key: 'getPosition',
         value: function getPosition() {
             return document.body.scrollTop || document.documentElement.scrollTop;
@@ -467,6 +492,38 @@ var Visibility = exports.Visibility = function () {
     }]);
 
     return Visibility;
+}();
+
+var Window = exports.Window = function () {
+    function Window() {
+        _classCallCheck(this, Window);
+    }
+
+    _createClass(Window, null, [{
+        key: 'open',
+
+
+        /**
+         * Open a new popup window.
+         *
+         * @param   {string}   url
+         * @param   {int}      width
+         * @param   {int}      height
+         * @param   {boolean}  center
+         */
+        value: function open(url) {
+            var width = arguments.length <= 1 || arguments[1] === undefined ? 600 : arguments[1];
+            var height = arguments.length <= 2 || arguments[2] === undefined ? 450 : arguments[2];
+            var center = arguments.length <= 3 || arguments[3] === undefined ? true : arguments[3];
+
+            var top = center ? screen.height / 2 - height / 2 : 0;
+            var left = center ? screen.width / 2 - width / 2 : 0;
+
+            window.open(url, '', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+        }
+    }]);
+
+    return Window;
 }();
 
 },{}],6:[function(require,module,exports){

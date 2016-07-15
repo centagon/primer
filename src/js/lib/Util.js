@@ -90,3 +90,21 @@ export class Visibility {
         return !Visibility.isVisible(element);
     }
 }
+
+export class Window {
+
+    /**
+     * Open a new popup window.
+     *
+     * @param   {string}   url
+     * @param   {int}      width
+     * @param   {int}      height
+     * @param   {boolean}  center
+     */
+    static open(url, width = 600, height = 450, center = true) {
+        const top = center ? (screen.height / 2) - (height / 2) : 0;
+        const left = center ? (screen.width / 2) - (width / 2) : 0;
+
+        window.open(url, '', `width=${width},height=${height},top=${top},left=${left}`);
+    }
+}

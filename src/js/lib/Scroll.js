@@ -1,3 +1,5 @@
+/* global $ */
+/* global jQuery */
 /**
  * This file is part of the Centagon Primer package.
  *
@@ -46,6 +48,24 @@ export default class Scroll {
         const threshold = this.settings.threshold;
 
         return Scroll.getPosition() > threshold;
+    }
+
+    /**
+     * Scroll to a certain position in the document.
+     *
+     * @param  {*}       offset
+     * @param  {Number}  speed
+     */
+    static to(offset, speed = 250) {
+        if (typeof offset === 'string') {
+            // Did we pass in a selector string?
+            offset = document.querySelector(offset).offsetTop;
+        } else if (offset instanceof jQuery) {
+            // Did we pass a jQuery object
+            offset = offset.offset().top;
+        }
+
+        $('body, html').animate({ scrollTop: offset }, speed);
     }
 
     /**
