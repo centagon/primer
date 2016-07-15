@@ -17,3 +17,6 @@ $lazyload-images: true !default;
 
 // Does the main container have a limit?
 $main-container-limit: rem-calc(1500) !default;
+
+// The global transition time limit.
+$transition-time: 0.15s;
