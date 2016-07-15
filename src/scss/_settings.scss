@@ -9,14 +9,18 @@
 
 @import '../components/foundation-sites/scss/util/util';
 
-// Default color settings
+/// Default color settings
+/// @type Map
 $colors: () !default;
 
-// Should images be lazily loaded?
+/// Should images be lazily loaded?
+/// @type Bool
 $lazyload-images: true !default;
 
-// Does the main container have a limit?
+/// Does the main container have a limit?
+/// @type Number
 $main-container-limit: rem-calc(1500) !default;
 
-// The global transition time limit.
+/// The global transition time limit.
+/// @type Number
 $transition-time: 0.15s;
