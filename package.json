@@ -29,6 +29,7 @@
     "all": "npm run js:compile && npm run sass:compile",
     "js:lint": "eslint src/js",
     "js:compile": "npm run js:lint && gulp js:compile && gulp js:uglify",
-    "sass:compile": "gulp sass:compile && gulp sass:minify"
+    "sass:lint": "scss-lint src/scss --config .scss-lint.yml",
+    "sass:compile": "npm run sass:lint && gulp sass:compile && gulp sass:minify"
   }
 }
