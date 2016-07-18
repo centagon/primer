@@ -43,7 +43,7 @@ equalizer.reset();
 ```javascript
 import LazyLoader from './lib/LazyLoader';
 
-new LazyLoader(selector = 'img[data-src');
+new LazyLoader(selector = 'img[data-src]');
 ```
 
 #### Scroll
