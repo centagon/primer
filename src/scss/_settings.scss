@@ -11,7 +11,12 @@
 
 /// Default color settings
 /// @type Map
-$colors: () !default;
+$colors: (
+    'black': rgb(10, 10, 10),
+    'white': rgb(255, 255, 255)
+
+    // ...
+) !default;
 
 /// Should images be lazily loaded?
 /// @type Bool
