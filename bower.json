@@ -3,7 +3,8 @@
   "description": "Commonly utilities used by Centagon for Zurb Foundation",
   "main": [],
   "dependencies": {
-    "foundation-sites": "6.2.*"
+    "foundation-sites": "6.2.*",
+    "susy": "^2.2.12"
   },
   "keywords": [
     "centagon",
