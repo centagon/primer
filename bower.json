@@ -3,8 +3,8 @@
   "description": "Commonly utilities used by Centagon for Zurb Foundation",
   "main": [],
   "dependencies": {
-    "foundation-sites": "6.2.*",
-    "susy": "^2.2.12"
+    "susy": "^2.2.12",
+    "normalize-scss": "normalize.scss#^5.0.3"
   },
   "keywords": [
     "centagon",
