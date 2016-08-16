@@ -7,8 +7,6 @@
  * file that was distributed with this source code.
  */
 
-@import '../components/foundation-sites/scss/util/util';
-
 /// Default color settings
 /// @type Map
 $colors: (
@@ -24,7 +22,7 @@ $lazyload-images: true !default;
 
 /// Does the main container have a limit?
 /// @type Number
-$main-container-limit: rem-calc(1500) !default;
+$main-container-limit: 1500px !default;
 
 /// The global transition time limit.
 /// @type Number
