@@ -449,7 +449,7 @@ body {
   max-width: 1500px; }
 
 .row {
-  max-width: 1155px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
   .row:after {
@@ -458,240 +458,240 @@ body {
     clear: both; }
 
 .row .row {
-  margin-left: -13.125px;
-  margin-right: -13.125px; }
+  margin-left: -15px;
+  margin-right: -15px; }
 
 .small-1 {
   box-sizing: border-box;
   width: 8.33333%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-2 {
   box-sizing: border-box;
   width: 16.66667%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-3 {
   box-sizing: border-box;
   width: 25%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-4 {
   box-sizing: border-box;
   width: 33.33333%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-5 {
   box-sizing: border-box;
   width: 41.66667%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-6 {
   box-sizing: border-box;
   width: 50%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-7 {
   box-sizing: border-box;
   width: 58.33333%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-8 {
   box-sizing: border-box;
   width: 66.66667%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-9 {
   box-sizing: border-box;
   width: 75%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-10 {
   box-sizing: border-box;
   width: 83.33333%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-11 {
   box-sizing: border-box;
   width: 91.66667%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .small-12 {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 13.125px;
-  padding-right: 13.125px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 @media (min-width: 40em) {
   .medium-1 {
     box-sizing: border-box;
     width: 8.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-2 {
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-3 {
     box-sizing: border-box;
     width: 25%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-4 {
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-5 {
     box-sizing: border-box;
     width: 41.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-6 {
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-7 {
     box-sizing: border-box;
     width: 58.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-8 {
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-9 {
     box-sizing: border-box;
     width: 75%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-10 {
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-11 {
     box-sizing: border-box;
     width: 91.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .medium-12 {
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; } }
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media (min-width: 64em) {
   .large-1 {
     box-sizing: border-box;
     width: 8.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-2 {
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-3 {
     box-sizing: border-box;
     width: 25%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-4 {
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-5 {
     box-sizing: border-box;
     width: 41.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-6 {
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-7 {
     box-sizing: border-box;
     width: 58.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-8 {
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-9 {
     box-sizing: border-box;
     width: 75%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-10 {
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-11 {
     box-sizing: border-box;
     width: 91.66667%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .large-12 {
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding-left: 13.125px;
-    padding-right: 13.125px; } }
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 /**
  * This file is part of the Centagon Primer package.
