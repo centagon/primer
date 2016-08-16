@@ -7,13 +7,14 @@
  * file that was distributed with this source code.
  */
 
-/// Base imports
+// Base imports
 @import 'settings';
 @import 'vendor';
 
-/// Import functions
+// Import functions
 @import 'functions/color';
 
-/// Import components
-@import 'components/containers';
+// Import components
+@import 'components/base';
+@import 'components/grid';
 @import 'components/images';

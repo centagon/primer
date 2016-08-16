@@ -1,0 +1,59 @@
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+$grid-generate: true !default;
+$grid-automatic-nesting: true !default;
+$grid-container-limit: 1500px !default;
+
+@if $grid-generate {
+
+    // The main website wrapper.
+    .container {
+        position: relative;
+        margin: 0 auto;
+
+        @if $grid-container-limit != false {
+            max-width: $grid-container-limit;
+        }
+    }
+
+    .row {
+        @include container;
+    }
+
+    // Automatic handling of nested rows.
+    @if $grid-automatic-nesting {
+        .row .row {
+            margin-left: - map-get(get-gutters(), before);
+            margin-right: - map-get(get-gutters(), after);
+        }
+    }
+
+    @for $i from 1 through susy-get('columns') {
+        .small-#{$i} {
+            @include span($i);
+        }
+    }
+
+    @include susy-media(40em) {
+        @for $i from 1 through susy-get('columns') {
+            .medium-#{$i} {
+                @include span($i);
+            }
+        }
+    }
+
+    @include susy-media(64em) {
+        @for $i from 1 through susy-get('columns') {
+            .large-#{$i} {
+                @include span($i);
+            }
+        }
+    }
+}

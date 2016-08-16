@@ -426,6 +426,15 @@ textarea {
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #141414; }
+
 /**
  * This file is part of the Centagon Primer package.
  *
@@ -434,10 +443,255 @@ textarea {
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-.main-container {
+.container {
   position: relative;
   margin: 0 auto;
-  max-width: 93.75rem; }
+  max-width: 1500px; }
+
+.row {
+  max-width: 1155px;
+  margin-left: auto;
+  margin-right: auto; }
+  .row:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.row .row {
+  margin-left: -13.125px;
+  margin-right: -13.125px; }
+
+.small-1 {
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-2 {
+  box-sizing: border-box;
+  width: 16.66667%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-3 {
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-4 {
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-5 {
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-6 {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-7 {
+  box-sizing: border-box;
+  width: 58.33333%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-8 {
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-9 {
+  box-sizing: border-box;
+  width: 75%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-10 {
+  box-sizing: border-box;
+  width: 83.33333%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-11 {
+  box-sizing: border-box;
+  width: 91.66667%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+.small-12 {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 13.125px;
+  padding-right: 13.125px; }
+
+@media (min-width: 40em) {
+  .medium-1 {
+    box-sizing: border-box;
+    width: 8.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-2 {
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-3 {
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-4 {
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-5 {
+    box-sizing: border-box;
+    width: 41.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-6 {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-7 {
+    box-sizing: border-box;
+    width: 58.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-8 {
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-9 {
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-10 {
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-11 {
+    box-sizing: border-box;
+    width: 91.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .medium-12 {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; } }
+
+@media (min-width: 64em) {
+  .large-1 {
+    box-sizing: border-box;
+    width: 8.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-2 {
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-3 {
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-4 {
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-5 {
+    box-sizing: border-box;
+    width: 41.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-6 {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-7 {
+    box-sizing: border-box;
+    width: 58.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-8 {
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-9 {
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-10 {
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-11 {
+    box-sizing: border-box;
+    width: 91.66667%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; }
+  .large-12 {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 13.125px;
+    padding-right: 13.125px; } }
 
 /**
  * This file is part of the Centagon Primer package.

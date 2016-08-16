@@ -7,10 +7,35 @@
  * file that was distributed with this source code.
  */
 
+/// Susy settings
+/// @type Map
+$susy: (
+    columns: 12,
+    gutter-position: inside-static,
+    gutters: 30px / 80px,
+    column-width: 70px
+);
+
+/// Will a grid be generated on compile?
+/// @type Boolean
+$grid-generate: true !default;
+
+/// When turned on, this setting adds negative margins to nested rows
+/// @type Boolean
+$grid-automatic-nesting: true !default;
+
+/// Does the main container have a limit?
+/// @type Number
+$grid-container-limit: 1500px !default;
+
+/// The default font-family
+/// @type String
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+
 /// Default color settings
 /// @type Map
 $colors: (
-    'black': rgb(10, 10, 10),
+    'black': rgb(20, 20, 20),
     'white': rgb(255, 255, 255)
 
     // ...
@@ -19,10 +44,6 @@ $colors: (
 /// Should images be lazily loaded?
 /// @type Bool
 $lazyload-images: true !default;
-
-/// Does the main container have a limit?
-/// @type Number
-$main-container-limit: 1500px !default;
 
 /// The global transition time limit.
 /// @type Number
