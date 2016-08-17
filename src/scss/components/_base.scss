@@ -1,12 +1,23 @@
-html {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@if $font-antialiasing {
+    html {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
 
 body {
-    font-size: $font-size-sans-serif;
-    font-family: $font-family-sans-serif;
-    line-height: $line-height-sans-serif;
+    font-size: $font-size;
+    font-family: $font-family;
+    line-height: $line-height;
     color: color-get('black');
 }

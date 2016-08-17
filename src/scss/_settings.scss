@@ -28,17 +28,21 @@ $grid-automatic-nesting: true !default;
 /// @type Number
 $grid-container-limit: 1500px !default;
 
+/// Whether or not font antialiasing is turned on.
+/// @type Boolean
+$font-antialiasing: false !default;
+
 /// The default font-family
 /// @type String
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
 /// The default font size
 /// @type Number
-$font-size-sans-serif: 1rem;
+$font-size: 1rem;
 
 /// The default line height
 /// @type Number
-$line-height-sans-serif: 1.5;
+$line-height: 1.5;
 
 /// Default color settings
 /// @type Map
