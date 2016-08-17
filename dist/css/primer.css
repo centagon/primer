@@ -432,7 +432,9 @@ html {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  font-family: Hevetica Neue, Heveltica, Arial, sans-serif;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
   color: #141414; }
 
 /**

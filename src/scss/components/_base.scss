@@ -5,6 +5,8 @@ html {
 }
 
 body {
+    font-size: $font-size-sans-serif;
     font-family: $font-family-sans-serif;
+    line-height: $line-height-sans-serif;
     color: color-get('black');
 }

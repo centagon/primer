@@ -30,7 +30,15 @@ $grid-container-limit: 1500px !default;
 
 /// The default font-family
 /// @type String
-$font-family-sans-serif: Hevetica Neue, Heveltica, Arial, sans-serif !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+/// The default font size
+/// @type Number
+$font-size-sans-serif: 1rem;
+
+/// The default line height
+/// @type Number
+$line-height-sans-serif: 1.5;
 
 /// Default color settings
 /// @type Map
