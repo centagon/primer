@@ -77,15 +77,6 @@ share.register('twitter', Twitter);
 share.boot();
 ```
 
-#### Util.Array
-
-```javascript
-import { Array } from './Util';
-
-Array.merge({ key: 'value' }, { key: 'awesome', another: 'value' });
-// { key: 'value', another: 'value' } 
-```
-
 #### Util.Orientation
 
 ```javascript

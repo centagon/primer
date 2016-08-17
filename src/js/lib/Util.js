@@ -7,32 +7,6 @@
  * file that was distributed with this source code.
  */
 
-export class Array {
-
-    /**
-     * Merge two objects.
-     *
-     * @param   {object}  obj1
-     * @param   {object}  obj2
-     * @returns {*}
-     */
-    static merge(obj1, obj2) {
-        Object.keys(obj2).forEach((prop) => {
-            try {
-                if (obj2[prop].constructor === Object) {
-                    obj1[prop] = Array.merge(obj1[prop], obj2[prop]);
-                } else {
-                    obj1[prop] = obj2[prop];
-                }
-            } catch (e) {
-                obj1[prop] = obj2[prop];
-            }
-        });
-
-        return obj1;
-    }
-}
-
 export class Orientation {
 
     /**

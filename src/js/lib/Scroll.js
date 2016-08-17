@@ -10,6 +10,7 @@
  */
 
 import { Array } from './Util';
+import _merge from 'lodash/merge';
 
 export default class Scroll {
 
@@ -19,7 +20,7 @@ export default class Scroll {
      * @param  {object}  options
      */
     constructor(options) {
-        this.settings = Array.merge({
+        this.settings = _merge({
             threshold: window.innerHeight / 2,
             onBeforeThreshold: () => {},
             onAfterThreshold: () => {}
