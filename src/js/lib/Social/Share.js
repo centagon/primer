@@ -8,6 +8,7 @@
  */
 
 import { Window } from '../Util';
+import _each from 'lodash/each';
 
 export default class Share {
 
@@ -54,7 +55,7 @@ export default class Share {
     registerEvents() {
         const elements = document.querySelectorAll(`[${this.selector}]`);
 
-        [].forEach.call(elements, (element) => {
+        _each(elements, element => {
             element.addEventListener('click', () => this.onClick(element));
         });
     }

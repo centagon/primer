@@ -10,6 +10,7 @@
  */
 
 import { Visibility, Orientation } from './Util';
+import _each from 'lodash/each';
 
 export default class Equalizer {
 
@@ -53,7 +54,7 @@ export default class Equalizer {
         const groups = {};
         const order = [];
 
-        [].forEach.call(elements, (element) => {
+        _each(elements, (element) => {
             const group = element.getAttribute('data-equalize') || 'global';
 
             // Check the visibility of the element. Invisible elements do

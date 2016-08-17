@@ -7,6 +7,8 @@
  * file that was distributed with this source code.
  */
 
+import _each from 'lodash/each';
+
 export default class {
 
     /**
@@ -16,6 +18,6 @@ export default class {
     static registerExternals() {
         const anchors = document.querySelectorAll('a[rel~=external]');
 
-        [].forEach.call(anchors, (el) => el.setAttribute('target', '_blank'));
+        _each(anchors, el => el.setAttribute('target', '_blank'));
     }
 }

@@ -7,6 +7,8 @@
  * file that was distributed with this source code.
  */
 
+import _each from 'lodash/each';
+
 export default class {
 
     /**
@@ -14,7 +16,7 @@ export default class {
      * @param   {string}  selector
      */
     constructor(selector = 'img[data-src]') {
-        [].forEach.call(document.querySelectorAll(selector), (img) => {
+        _each(document.querySelectorAll(selector), (img) => {
             img.setAttribute('src', img.getAttribute('data-src'));
 
             img.onload = () => img.removeAttribute('data-src');
