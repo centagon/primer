@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-@if map-get($font, antialiasing) {
+@if config-get($font, antialiasing) {
     html {
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -16,8 +16,8 @@
 }
 
 body {
-    font-size: map-get($font, size);
-    font-family: unquote(map-get($font, family));
-    line-height: map-get($font, line-height);
-    color: map-get($font, color);
+    font-size: config-get($font, size);
+    font-family: unquote(config-get($font, family));
+    line-height: config-get($font, line-height);
+    color: config-get($font, color);
 }

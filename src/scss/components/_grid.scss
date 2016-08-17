@@ -7,15 +7,15 @@
  * file that was distributed with this source code.
  */
 
-@if map-get($grid, generate) {
+@if config-get($grid, generate) {
 
     // The main website wrapper.
     .container {
         position: relative;
         margin: 0 auto;
 
-        @if map-get($grid, container-limit) != false {
-            max-width: map-get($grid, container-limit);
+        @if config-get($grid, container-limit) != false {
+            max-width: config-get($grid, container-limit);
         }
     }
 
@@ -24,10 +24,10 @@
     }
 
     // Automatic handling of nested rows.
-    @if map-get($grid, automatic-nesting) {
+    @if config-get($grid, automatic-nesting) {
         .row .row {
-            margin-left: - map-get(get-gutters(), before);
-            margin-right: - map-get(get-gutters(), after);
+            margin-left: - config-get(get-gutters(), before);
+            margin-right: - config-get(get-gutters(), after);
         }
     }
 

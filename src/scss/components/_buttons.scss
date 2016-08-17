@@ -17,15 +17,15 @@ html [type=button] {
 
 .button {
     display: inline-block;
-    padding: map-get($buttons, padding);
-    font-size: map-get($buttons, font-size);
-    font-weight: map-get($buttons, font-weight);
-    line-height: map-get($buttons, line-height);
+    padding: config-get($buttons, padding);
+    font-size: config-get($buttons, font-size);
+    font-weight: config-get($buttons, font-weight);
+    line-height: config-get($buttons, line-height);
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    color: map-get($buttons, font-color);
-    background-color: map-get($buttons, background-color);
+    color: config-get($buttons, font-color);
+    background-color: config-get($buttons, background-color);
 }
