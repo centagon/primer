@@ -457,7 +457,7 @@ body {
 [type=submit],
 button,
 html [type=button] {
-  border: none;
+  border: 0;
   -webkit-appearance: button; }
 
 .button {

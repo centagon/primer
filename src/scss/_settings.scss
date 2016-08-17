@@ -52,7 +52,7 @@ $buttons: (
     font-color: map-get($colors, blue),
     line-height: map-get($font, line-height),
     background-color: map-get($colors, white),
-    padding: .5rem 1rem
+    padding: 0.5rem 1rem
 ) !default;
 
 /// Should images be lazily loaded?
