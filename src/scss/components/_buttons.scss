@@ -18,7 +18,7 @@ html [type=button] {
 .button {
     display: inline-block;
     padding: map-get($buttons, padding);
-    font-size: $font-size;
+    font-size: map-get($buttons, font-size);
     font-weight: map-get($buttons, font-weight);
     line-height: map-get($buttons, line-height);
     text-align: center;
