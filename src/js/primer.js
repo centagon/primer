@@ -13,3 +13,9 @@ import LazyLoader from './lib/LazyLoader';
 import Scroll from './lib/Scroll';
 
 global.Primer = { Anchor, Equalizer, LazyLoader, Scroll };
+
+// Disable/enable console debugging on the fly.
+if (global.Primer.debug !== true) {
+    var console = {};
+    console.log = () => {};
+}
