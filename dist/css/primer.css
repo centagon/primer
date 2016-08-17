@@ -453,6 +453,38 @@ body {
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  border: none;
+  -webkit-appearance: button; }
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: blue;
+  background-color: white; }
+
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 .container {
   position: relative;
   margin: 0 auto;

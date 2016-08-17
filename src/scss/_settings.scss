@@ -48,9 +48,20 @@ $line-height: 1.5;
 /// @type Map
 $colors: (
     'black': rgb(20, 20, 20),
-    'white': rgb(255, 255, 255)
+    'white': rgb(255, 255, 255),
+    'blue': rgb(0, 0, 255)
 
     // ...
+) !default;
+
+/// Default button settings
+/// @type Map
+$buttons: (
+    font-weight: normal,
+    font-color: map-get($colors, 'blue'), 
+    line-height: $line-height,
+    background-color: map-get($colors, 'white'),
+    padding: .5rem 1rem
 ) !default;
 
 /// Should images be lazily loaded?
