@@ -66,3 +66,8 @@ gulp.task('sass:minify', () =>
         .pipe(rename('primer.min.css'))
         .pipe(gulp.dest('./dist/css'))
 );
+
+gulp.task('default', () => {
+    gulp.watch('src/scss/**/*.scss', ['sass:compile', 'sass:minify']);
+    gulp.watch('src/js/**/*.js', ['js:compile', 'js:uglify']);
+});
