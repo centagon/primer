@@ -17,5 +17,8 @@ global.Primer = { Anchor, Equalizer, LazyLoader, Scroll };
 // Disable/enable console debugging on the fly.
 if (global.Primer.debug !== true) {
     var console = {};
-    console.log = () => {};
+    console.log
+      = console.info
+      = console.warn
+      = console.error = () => {};
 }
