@@ -4674,7 +4674,7 @@ function _class() {
 
     _classCallCheck(this, _class);
 
-    (0, _each3.default)(document.querySelectorAll(selector), function (img) {
+    [].forEach.call(document.querySelectorAll(selector), function (img) {
         img.setAttribute('src', img.getAttribute('data-src'));
 
         img.onload = function () {
