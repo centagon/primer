@@ -28,6 +28,14 @@ $grid: (
     container-limit: 1500px
 ) !default;
 
+/// Breakpoint settings
+/// @type Map
+$breakpoints: (
+    small: 0,
+    medium: 40em,
+    large: 64em
+) !default;
+
 /// Default color settings
 /// @type Map
 $colors: (

@@ -31,19 +31,11 @@
         }
     }
 
-    @for $i from 1 through susy-get('columns') {
-        @include make-column(small, $i);
-    }
-
-    @include susy-media(40em) {
-        @for $i from 1 through susy-get('columns') {
-            @include make-column(medium, $i);
-        }
-    }
-
-    @include susy-media(64em) {
-        @for $i from 1 through susy-get('columns') {
-            @include make-column(large, $i);
+    @each $breakpoint, $value in $breakpoints {
+        @include susy-media($value) {
+            @for $i from 1 through susy-get('columns') {
+                @include make-column($breakpoint, $i);
+            }
         }
     }
 }
