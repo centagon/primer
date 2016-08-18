@@ -16,7 +16,8 @@
 }
 
 body {
-    font-size: config-get($font, size);
+    @include rem-calc(font-size, config-get($font, size));
+
     font-family: unquote(config-get($font, family));
     line-height: config-get($font, line-height);
     color: config-get($font, color);

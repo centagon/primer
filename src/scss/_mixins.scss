@@ -7,14 +7,12 @@
  * file that was distributed with this source code.
  */
 
-// Base imports
-@import 'settings';
-@import 'vendor';
-@import 'functions';
-@import 'mixins';
+@mixin rem-calc($property, $values) {
+    $fallback: apply-fn(rem-calc, $values);
 
-// Import components
-@import 'components/base';
-@import 'components/buttons';
-@import 'components/grid';
-@import 'components/images';
+    @if $fallback != $values {
+        #{$property}: $fallback + px;
+    }
+
+    #{$property}: $values;
+}

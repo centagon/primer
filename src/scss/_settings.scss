@@ -16,6 +16,10 @@ $susy: (
     column-width: 70px
 );
 
+/// The base pixel size rem values will be calculated on.
+/// @type Number
+$pixel-base: 16px;
+
 /// Grid settings
 /// @type Map
 $grid: (

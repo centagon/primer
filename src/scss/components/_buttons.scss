@@ -15,10 +15,21 @@ html [type=button] {
     -webkit-appearance: button;
 }
 
+a,
+button {
+    color: config-get($buttons, font-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .button {
+    @include rem-calc(padding, config-get($buttons, padding));
+    @include rem-calc(font-size, config-get($buttons, font-size));
+
     display: inline-block;
-    padding: config-get($buttons, padding);
-    font-size: config-get($buttons, font-size);
     font-weight: config-get($buttons, font-weight);
     line-height: config-get($buttons, line-height);
     text-align: center;
@@ -26,6 +37,5 @@ html [type=button] {
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    color: config-get($buttons, font-color);
     background-color: config-get($buttons, background-color);
 }
