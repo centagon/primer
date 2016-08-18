@@ -16,3 +16,17 @@
 
     #{$property}: $values;
 }
+
+@mixin column($type, $size) {
+    .#{$type}-#{$size} {
+        @include span($size);
+    }
+
+    .#{$type}-pull-#{$size} {
+        @include pull($size);
+    }
+
+    .#{$type}-push-#{$size} {
+        @include push($size);
+    }
+}

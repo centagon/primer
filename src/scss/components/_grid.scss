@@ -32,24 +32,18 @@
     }
 
     @for $i from 1 through susy-get('columns') {
-        .small-#{$i} {
-            @include span($i);
-        }
+        @include column(small, $i);
     }
 
     @include susy-media(40em) {
         @for $i from 1 through susy-get('columns') {
-            .medium-#{$i} {
-                @include span($i);
-            }
+            @include column(medium, $i);
         }
     }
 
     @include susy-media(64em) {
         @for $i from 1 through susy-get('columns') {
-            .large-#{$i} {
-                @include span($i);
-            }
+            @include column(large, $i);
         }
     }
 }
