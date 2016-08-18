@@ -1,0 +1,18 @@
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@function apply-fn($fn, $values) {
+    $new-values: ();
+
+    @each $value in $values {
+        $new-values: append($new-values, call($fn, $value), list-separator($values));
+    }
+
+    @return $new-values;
+}

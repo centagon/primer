@@ -1,0 +1,16 @@
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@function rem-calc($value) {
+    @if unit($value) == rem {
+        @return $value / 1rem * $pixel-base;
+    }
+
+    @return $value;
+}

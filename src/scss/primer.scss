@@ -10,7 +10,12 @@
 // Base imports
 @import 'settings';
 @import 'vendor';
-@import 'functions';
+
+// Import functions
+@import 'functions/util';
+@import 'functions/config';
+@import 'functions/calc';
+@import 'functions/color';
 
 // Import mixins
 @import 'mixins/calc';

@@ -1,0 +1,17 @@
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@function config-get($map, $key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+
+    @error "Unknown config `#{$key}`!";
+    @return null;
+}
