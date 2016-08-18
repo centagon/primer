@@ -11,6 +11,8 @@
 
     // The main website wrapper.
     .container {
+        @include rem-calc(padding, (config-get(get-gutters(), before) * 2) 0);
+
         position: relative;
         margin: 0 auto;
 
