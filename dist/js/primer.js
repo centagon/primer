@@ -4703,8 +4703,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
  * file that was distributed with this source code.
  */
 
-var _Util = require('./Util');
-
 var _merge2 = require('lodash/merge');
 
 var _merge3 = _interopRequireDefault(_merge2);
@@ -4807,7 +4805,7 @@ var Scroll = function () {
 
 exports.default = Scroll;
 
-},{"./Util":157,"lodash/merge":147}],157:[function(require,module,exports){
+},{"lodash/merge":147}],157:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4947,17 +4945,17 @@ var Window = exports.Window = function () {
 (function (global){
 'use strict';
 
-var _Anchor = require('./lib/Anchor');
+var _LazyLoader = require('./lib/LazyLoader');
 
-var _Anchor2 = _interopRequireDefault(_Anchor);
+var _LazyLoader2 = _interopRequireDefault(_LazyLoader);
 
 var _Equalizer = require('./lib/Equalizer');
 
 var _Equalizer2 = _interopRequireDefault(_Equalizer);
 
-var _LazyLoader = require('./lib/LazyLoader');
+var _Anchor = require('./lib/Anchor');
 
-var _LazyLoader2 = _interopRequireDefault(_LazyLoader);
+var _Anchor2 = _interopRequireDefault(_Anchor);
 
 var _Scroll = require('./lib/Scroll');
 
@@ -4965,6 +4963,8 @@ var _Scroll2 = _interopRequireDefault(_Scroll);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* global Primer */
+/* eslint-disable no-console */
 /**
  * This file is part of the Centagon Primer package.
  *
@@ -4974,7 +4974,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * file that was distributed with this source code.
  */
 
-global.Primer = { Anchor: _Anchor2.default, Equalizer: _Equalizer2.default, LazyLoader: _LazyLoader2.default, Scroll: _Scroll2.default };
+var VERSION = '0.0.5';
+
+(global.Primer = global.Primer || {}).boot = function () {
+    var debug = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+
+    // Suppress console logging when debugging is disabled.
+    if (!debug) {
+        global.console = {};
+        console.log = console.info = console.warm = console.error = function () {};
+    } else {
+        console.warn('Centagon Primer ' + VERSION + ' debug mode enabled!\nPlease disable logging on production by calling Primer.boot(false);');
+    }
+
+    // Expose common libraries.
+    Primer.LazyLoader = _LazyLoader2.default;
+    Primer.Equalizer = _Equalizer2.default;
+    Primer.Anchor = _Anchor2.default;
+    Primer.Scroll = _Scroll2.default;
+};
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
