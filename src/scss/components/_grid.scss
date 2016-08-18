@@ -32,18 +32,18 @@
     }
 
     @for $i from 1 through susy-get('columns') {
-        @include column(small, $i);
+        @include make-column(small, $i);
     }
 
     @include susy-media(40em) {
         @for $i from 1 through susy-get('columns') {
-            @include column(medium, $i);
+            @include make-column(medium, $i);
         }
     }
 
     @include susy-media(64em) {
         @for $i from 1 through susy-get('columns') {
-            @include column(large, $i);
+            @include make-column(large, $i);
         }
     }
 }
