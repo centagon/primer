@@ -9,7 +9,6 @@
  * file that was distributed with this source code.
  */
 
-import { Array } from './Util';
 import _merge from 'lodash/merge';
 
 export default class Scroll {
