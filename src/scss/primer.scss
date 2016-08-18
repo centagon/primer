@@ -11,7 +11,10 @@
 @import 'settings';
 @import 'vendor';
 @import 'functions';
-@import 'mixins';
+
+// Import mixins
+@import 'mixins/calc';
+@import 'mixins/grid';
 
 // Import components
 @import 'components/base';

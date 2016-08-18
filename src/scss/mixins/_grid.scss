@@ -7,12 +7,16 @@
  * file that was distributed with this source code.
  */
 
-@mixin rem-calc($property, $values) {
-    $fallback: apply-fn(rem-calc, $values);
-
-    @if $fallback != $values {
-        #{$property}: $fallback + px;
+@mixin make-column($type, $size) {
+    .#{$type}-#{$size} {
+        @include span($size);
     }
 
-    #{$property}: $values;
+    .#{$type}-pull-#{$size} {
+        @include pull($size);
+    }
+
+    .#{$type}-push-#{$size} {
+        @include push($size);
+    }
 }
