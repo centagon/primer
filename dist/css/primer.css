@@ -466,23 +466,15 @@ textarea {
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  font-size: 16pxpx;
-  font-size: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #141414; }
 
@@ -510,11 +502,11 @@ a:hover {
   text-decoration: underline; }
 
 .button {
-  padding: 8px 16pxpx;
-  padding: 0.5rem 1rem;
-  font-size: 16pxpx;
-  font-size: 1rem;
   display: inline-block;
+  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   text-align: center;
@@ -536,8 +528,8 @@ a:hover {
  * file that was distributed with this source code.
  */
 .container {
-  padding: 30px 0;
   position: relative;
+  padding: 1.875rem 0;
   margin: 0 auto;
   max-width: 1500px; }
 
@@ -934,5 +926,20 @@ img {
 
 img[data-src] {
   opacity: 0; }
+
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+.panel {
+  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
+  padding: 15px;
+  padding: 0.9375rem;
+  border: 1px solid #141414; }
 
 /*# sourceMappingURL=primer.css.map */

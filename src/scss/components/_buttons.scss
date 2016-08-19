@@ -7,6 +7,13 @@
  * file that was distributed with this source code.
  */
 
+$button-padding: config-get($buttons, padding);
+$button-font-color: config-get($buttons, font-color);
+$button-font-size: config-get($buttons, font-size);
+$button-font-weight: config-get($buttons, font-weight);
+$button-line-height: config-get($buttons, line-height);
+$button-background: config-get($buttons, background-color);
+
 [type=reset],
 [type=submit],
 button,
@@ -17,7 +24,7 @@ html [type=button] {
 
 a,
 button {
-    color: config-get($buttons, font-color);
+    color: $button-font-color;
     text-decoration: none;
 }
 
@@ -26,16 +33,17 @@ a:hover {
 }
 
 .button {
-    @include rem-calc(padding, config-get($buttons, padding));
-    @include rem-calc(font-size, config-get($buttons, font-size));
-
     display: inline-block;
-    font-weight: config-get($buttons, font-weight);
-    line-height: config-get($buttons, line-height);
+    padding: $button-padding;
+    padding: rem-calc($button-padding);
+    font-size: $button-font-size;
+    font-size: rem-calc($button-font-size);
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    background-color: config-get($buttons, background-color);
+    background-color: $button-background;
 }

@@ -1,0 +1,19 @@
+/**
+ * This file is part of the Centagon Primer package.
+ *
+ * (c) Centagon <contact@centagon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+$panel-margin: config-get(get-gutters(), before);
+$panel-padding: config-get(get-gutters(), before);
+
+.panel {
+    margin-bottom: $panel-margin;
+    margin-bottom: rem-calc($panel-margin);
+    padding: $panel-padding;
+    padding: rem-calc($panel-padding);
+    border: 1px solid color-get(black);
+}

@@ -11,7 +11,7 @@
     $fallback: apply-fn(rem-calc, $values);
 
     @if $fallback != $values {
-        #{$property}: $fallback + px;
+        #{$property}: $fallback;
     }
 
     #{$property}: $values;

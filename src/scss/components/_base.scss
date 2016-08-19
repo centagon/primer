@@ -7,6 +7,11 @@
  * file that was distributed with this source code.
  */
 
+$font-family: config-get($font, family);
+$font-size: config-get($font, size);
+$line-height: config-get($font, line-height);
+$font-color: config-get($font, color);
+
 @if config-get($font, antialiasing) {
     html {
         text-rendering: optimizeLegibility;
@@ -16,9 +21,9 @@
 }
 
 body {
-    @include rem-calc(font-size, config-get($font, size));
-
-    font-family: unquote(config-get($font, family));
-    line-height: config-get($font, line-height);
-    color: config-get($font, color);
+    font-family: unquote($font-family);
+    font-size: $font-size;
+    font-size: rem-calc($font-size);
+    line-height: $line-height;
+    color: $font-color;
 }
