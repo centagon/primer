@@ -11,9 +11,8 @@ $panel-margin: config-get(get-gutters(), before);
 $panel-padding: config-get(get-gutters(), before);
 
 .panel {
-    margin-bottom: $panel-margin;
-    margin-bottom: rem-calc($panel-margin);
-    padding: $panel-padding;
-    padding: rem-calc($panel-padding);
+    @include rem-calc(margin-bottom, $panel-margin);
+    @include rem-calc(padding, $panel-padding);
+
     border: 1px solid color-get(black);
 }
