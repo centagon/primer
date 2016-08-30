@@ -28,7 +28,6 @@
     "lodash": "^4.15.0"
   },
   "scripts": {
-    "install": "npm install && bower install",
     "update": "npm up && bower up",
     "all": "npm run js:compile && npm run sass:compile",
     "js:lint": "eslint src/js",

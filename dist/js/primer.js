@@ -4517,7 +4517,6 @@ var Equalizer = function () {
      *
      * @param  {string}  selector
      */
-
     function Equalizer() {
         var selector = arguments.length <= 0 || arguments[0] === undefined ? '.equalized' : arguments[0];
 
@@ -4718,7 +4717,6 @@ var Scroll = function () {
      *
      * @param  {object}  options
      */
-
     function Scroll(options) {
         var _this = this;
 
@@ -4974,9 +4972,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * file that was distributed with this source code.
  */
 
-var VERSION = '0.0.5';
+var VERSION = '0.1.1';
 
-(global.Primer = global.Primer || {}).boot = function () {
+global.Primer = global.Primer || {};
+global.Primer._console = global.console;
+
+Primer.boot = function () {
     var debug = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
     // Suppress console logging when debugging is disabled.
@@ -4984,6 +4985,9 @@ var VERSION = '0.0.5';
         global.console = {};
         console.log = console.info = console.warm = console.error = function () {};
     } else {
+        // Restore console logging.
+        global.console = Primer._console;
+
         console.warn('Centagon Primer ' + VERSION + ' debug mode enabled!\nPlease disable logging on production by calling Primer.boot(false);');
     }
 

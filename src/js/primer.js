@@ -14,9 +14,12 @@ import Equalizer from './lib/Equalizer';
 import Anchor from './lib/Anchor';
 import Scroll from './lib/Scroll';
 
-const VERSION = '0.0.5';
+const VERSION = '0.1.1';
 
-(global.Primer = global.Primer || {}).boot = (debug = false) => {
+global.Primer = global.Primer || {};
+global.Primer._console = global.console;
+
+Primer.boot = (debug = false) => {
     // Suppress console logging when debugging is disabled.
     if (!debug) {
         global.console = {};
@@ -25,6 +28,9 @@ const VERSION = '0.0.5';
             = console.warm
             = console.error = () => {};
     } else {
+        // Restore console logging.
+        global.console = Primer._console;
+
         console.warn(`Centagon Primer ${VERSION} debug mode enabled!
 Please disable logging on production by calling Primer.boot(false);`);
     }
