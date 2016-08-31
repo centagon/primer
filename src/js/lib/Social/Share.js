@@ -18,7 +18,7 @@ export default class Share {
      * @param   {String}  selector
      */
     constructor(selector = 'data-social') {
-        this.networks = new Map;
+        this.networks = {};
         this.selector = selector;
     }
 
@@ -33,7 +33,7 @@ export default class Share {
             return network.forEach((n, i) => this.register(n, i));
         }
 
-        this.networks.set(network, instance);
+        this.networks[network] = instance;
 
         return this;
     }
@@ -42,9 +42,9 @@ export default class Share {
      * Boot the map of social media networks.
      */
     boot() {
-        for (const [network, Instance] of this.networks.entries()) {
+        this.networks.forEach((network, Instance) => {
             this.networks[network] = new Instance(this);
-        }
+        });
 
         this.registerEvents();
     }
