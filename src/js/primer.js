@@ -16,20 +16,27 @@ import Scroll from './lib/Scroll';
 
 const VERSION = '0.1.1';
 
-global.Primer = global.Primer || {};
-global.Primer._console = global.console;
+// Initialize the Primer object.
+window.Primer = window.Primer || {};
 
+// Store the console object for later usage.
+Primer.console = window.console;
+
+/**
+ * The Primer bootstrapper function.
+ * @param  {bool}  debug
+ */
 Primer.boot = (debug = false) => {
     // Suppress console logging when debugging is disabled.
     if (!debug) {
-        global.console = {};
+        window.console = {};
         console.log
             = console.info
             = console.warm
             = console.error = () => {};
     } else {
         // Restore console logging.
-        global.console = Primer._console;
+        window.console = Primer.console;
 
         console.warn(`Centagon Primer ${VERSION} debug mode enabled!
 Please disable logging on production by calling Primer.boot(false);`);

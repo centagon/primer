@@ -4940,7 +4940,6 @@ var Window = exports.Window = function () {
 }();
 
 },{}],158:[function(require,module,exports){
-(function (global){
 'use strict';
 
 var _LazyLoader = require('./lib/LazyLoader');
@@ -4974,19 +4973,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VERSION = '0.1.1';
 
-global.Primer = global.Primer || {};
-global.Primer._console = global.console;
+// Initialize the Primer object.
+window.Primer = window.Primer || {};
 
+// Store the console object for later usage.
+Primer.console = window.console;
+
+/**
+ * The Primer bootstrapper function.
+ * @param  {bool}  debug
+ */
 Primer.boot = function () {
     var debug = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
     // Suppress console logging when debugging is disabled.
     if (!debug) {
-        global.console = {};
+        window.console = {};
         console.log = console.info = console.warm = console.error = function () {};
     } else {
         // Restore console logging.
-        global.console = Primer._console;
+        window.console = Primer.console;
 
         console.warn('Centagon Primer ' + VERSION + ' debug mode enabled!\nPlease disable logging on production by calling Primer.boot(false);');
     }
@@ -4997,8 +5003,6 @@ Primer.boot = function () {
     Primer.Anchor = _Anchor2.default;
     Primer.Scroll = _Scroll2.default;
 };
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{"./lib/Anchor":153,"./lib/Equalizer":154,"./lib/LazyLoader":155,"./lib/Scroll":156}]},{},[158])
 
