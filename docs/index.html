@@ -8,10 +8,11 @@
 
     <link rel="stylesheet" href="css/primer.css">
     <link rel="stylesheet" href="css/docs.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-dark.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/scss.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
@@ -92,31 +93,44 @@
                     That's why buttons only set default properties like margins and padding to distinguish
                     buttons from anchors and other elements.
 
-                    <pre><code class="sass">$buttons: (
+                    <pre><code class="scss">$buttons: (
     font-size: map-get($font, size),
     font-weight: normal,
     font-color: map-get($colors, blue),
     line-height: map-get($font, line-height),
     background-color: map-get($colors, white),
     padding: 0.5rem 1rem
-) !default;</code></pre>
+);</code></pre>
                 </p>
 
                 <a name="scss-grid"></a>
                 <h3>Grid</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet autem culpa dicta doloremque explicabo fuga in incidunt iste minus modi necessitatibus, omnis porro provident reprehenderit similique tempore tenetur.</p>
+
+                <h4>Grid settings</h4>
+                <pre><code class="scss">$grid: (
+    generate: true,
+    automatic-nesting: true,
+    container-limit: 1500px
+);</code></pre>
+
+                <h4>Breakpoint settings</h4>
+<pre><code class="scss">$breakpoints: (
+    small: 0,
+    medium: 40em,
+    large: 64em
+);</code></pre>
 
                 <a name="scss-images"></a>
                 <h3>Images</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet distinctio eius harum impedit, incidunt nulla tempore ut! A architecto aut blanditiis, debitis, error eum molestias neque, nihil quaerat quis voluptatum?</p>
+                <pre><code class="scss">$lazyload-images: true;</code></pre>
 
                 <a name="scss-functions"></a>
                 <h3>Functions</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque cum fuga fugiat iusto officia provident quis reprehenderit sit ullam! Eius exercitationem impedit iusto laudantium, officiis quisquam reiciendis suscipit voluptate?</p>
+                <p>TODO</p>
 
                 <a name="scss-mixins"></a>
                 <h3>Mixins</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur consequatur deserunt dicta error est impedit inventore nam, nostrum numquam quas quos sapiente sint tempora tempore ut vel, vitae voluptatem.</p>
+                <p>TODO</p>
             </article>
 
             <article>

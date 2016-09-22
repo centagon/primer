@@ -58,4 +58,5 @@ h3 {
 code {
 	padding: 15px !important;
 	font-size: 15px;
+	border-radius: 5px;
 }
