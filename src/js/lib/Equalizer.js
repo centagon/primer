@@ -1,13 +1,5 @@
 /* global $ */
 /* global Foundation */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
 import { Visibility, Orientation } from './Util';
 import _each from 'lodash/each';

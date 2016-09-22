@@ -1,11 +1,22 @@
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+@function to-rem($value, $base: null) {
+    // Check if the value is a number
+    @if type-of($value) != 'number' {
+        @warn inspect($value) + ' was passed to to-rem(), which is not a number.';
+        @return $value;
+    }
+
+    // Calculate rem if units for $value is not rem
+    @if unit($value) != 'rem' {
+        $value: strip-unit($value) / strip-unit($base) * 1rem;
+    }
+
+    // Turn 0rem into 0
+    @if $value == '0rem' {
+        $value: 0;
+    }
+
+    @return $value;
+}
 
 @function rem-calc($values, $base: null) {
     $rem-values: ();
@@ -31,25 +42,4 @@
     }
 
     @return $rem-values;
-}
-
-
-@function to-rem($value, $base: null) {
-    // Check if the value is a number
-    @if type-of($value) != 'number' {
-        @warn inspect($value) + ' was passed to to-rem(), which is not a number.';
-        @return $value;
-    }
-
-    // Calculate rem if units for $value is not rem
-    @if unit($value) != 'rem' {
-        $value: strip-unit($value) / strip-unit($base) * 1rem;
-    }
-
-    // Turn 0rem into 0
-    @if $value == '0rem' {
-        $value: 0;
-    }
-
-    @return $value;
 }
