@@ -25,23 +25,25 @@
                     <li>
                         SCSS
                         <ul>
-                            <li><a href="#">Buttons</a></li>
-                            <li><a href="#">Grid</a></li>
-                            <li><a href="#">Images</a></li>
-                            <li><a href="#">Functions</a></li>
-                            <li><a href="#">Mixins</a></li>
+                            <li><a href="#scss-gettingstarted">Getting Started</a></li>
+                            <li><a href="#scss-buttons">Buttons</a></li>
+                            <li><a href="#scss-grid">Grid</a></li>
+                            <li><a href="#scss-images">Images</a></li>
+                            <li><a href="#scss-functions">Functions</a></li>
+                            <li><a href="#scss-mixins">Mixins</a></li>
                         </ul>
                     </li>
 
                     <li>
                         Javascript
                         <ul>
-                            <li><a href="#">Anchor</a></li>
-                            <li><a href="#">Equalizer</a></li>
-                            <li><a href="#">Lazy loading</a></li>
-                            <li><a href="#">Scroll</a></li>
-                            <li><a href="#">Social media</a></li>
-                            <li><a href="#">Utilities</a></li>
+                            <li><a href="#js-gettingstarted">Getting Started</a></li>
+                            <li><a href="#js-anchor">Anchor</a></li>
+                            <li><a href="#js-equalizer">Equalizer</a></li>
+                            <li><a href="#js-lazyloading">Lazy loading</a></li>
+                            <li><a href="#js-scroll">Scroll</a></li>
+                            <li><a href="#js-socialmedia">Social media</a></li>
+                            <li><a href="#js-util">Utilities</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -52,6 +54,11 @@
         <div class="small-12 medium-9">
             <article>
                 <h1>Centagon Primer</h1>
+
+                <a href="https://badge.fury.io/bo/centagon-primer">
+                    <img src="https://badge.fury.io/bo/centagon-primer.svg" alt="Bower version" data-canonical-src="https://badge.fury.io/bo/centagon-primer.svg" style="max-width:100%;">
+                </a>
+
                 <h3>Getting Started</h3>
                 <p>
                     The quickest way to get started is with a <a href="#">basic download</a>.<br>
@@ -74,8 +81,186 @@
                     Copyright (c) 2016 Centagon, B.V.
                 </p>
             </article>
+
+            <article>
+                <h1>SCSS</h1>
+
+                <a name="scss-buttons"></a>
+                <h3>Buttons</h3>
+                <p>
+                    Primer tries to not force too much default styling on your elements.
+                    That's why buttons only set default properties like margins and padding to distinguish
+                    buttons from anchors and other elements.
+
+                    <pre><code class="sass">$buttons: (
+    font-size: map-get($font, size),
+    font-weight: normal,
+    font-color: map-get($colors, blue),
+    line-height: map-get($font, line-height),
+    background-color: map-get($colors, white),
+    padding: 0.5rem 1rem
+) !default;</code></pre>
+                </p>
+
+                <a name="scss-grid"></a>
+                <h3>Grid</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet autem culpa dicta doloremque explicabo fuga in incidunt iste minus modi necessitatibus, omnis porro provident reprehenderit similique tempore tenetur.</p>
+
+                <a name="scss-images"></a>
+                <h3>Images</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet distinctio eius harum impedit, incidunt nulla tempore ut! A architecto aut blanditiis, debitis, error eum molestias neque, nihil quaerat quis voluptatum?</p>
+
+                <a name="scss-functions"></a>
+                <h3>Functions</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque cum fuga fugiat iusto officia provident quis reprehenderit sit ullam! Eius exercitationem impedit iusto laudantium, officiis quisquam reiciendis suscipit voluptate?</p>
+
+                <a name="scss-mixins"></a>
+                <h3>Mixins</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur consequatur deserunt dicta error est impedit inventore nam, nostrum numquam quas quos sapiente sint tempora tempore ut vel, vitae voluptatem.</p>
+            </article>
+
+            <article>
+                <h1>Javascript</h1>
+
+                <a name="js-gettingstarted"></a>
+                <h3>Getting Started</h3>
+
+                <p>
+                    It's easy to start using Primer's javascript components, just import the required components
+                    in your next ES6 compatible project or including the minified source directly on your HTML page.
+                </p>
+
+                <h4>Using the minified source</h4>
+                <p>
+                    When using the minified source code there are a couple if things you'll have to consider:
+                    <br>Including the source:
+                </p>
+                <pre><code class="html">&#x3C;script src=&#x22;/js/primer.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script&#x3E;Primer.boot();&#x3C;/script&#x3E;</code></pre>
+
+                <h4>Using ES6 imports</h4>
+                <p>
+                    The other (preferred) way is to just use ES6 imports.
+                    The component documentation code below uses imports.
+                </p>
+
+                <h4>Booting Primer</h4>
+                <pre><code class="js">Primer.boot(true);</code></pre>
+                <p>
+                    By defaults, Primer boots into production mode disabling all console logging.
+                    To counteract this behaviour just must pass <code>true</code> as the first argument on
+                    the <code>boot</code> method. This also enables console logging but also adds a warning
+                    message to the console like the one below:
+                </p>
+
+                <img src="img/primer-boot.png">
+
+                <a name="js-anchor"></a>
+                <h3>Anchor</h3>
+                <pre><code class="js">import Anchor from './lib/Anchor';
+
+// Register rel=external handlers.
+(new Anchor).registerExternals();</code></pre>
+
+                <a name="js-equalizer"></a>
+                <h3>Equalizer</h3>
+                <pre><code class="js">import Equalizer from './lib/Equalizer';
+
+const equalizer = new Equalizer(selector = '.equalized');
+
+// Register/boot the equalizer
+equalizer.register(scope = window);
+
+// Reset all equalized elements
+equalizer.reset();</code></pre>
+
+                <a name="js-lazyloading"></a>
+                <h3>Lazy Loading</h3>
+                <pre><code class="js">import LazyLoader from './lib/LazyLoader';
+
+new LazyLoader(selector = 'img[data-src]');</code></pre>
+
+                <a name="js-scroll"></a>
+                <h3>Scroll</h3>
+                <pre><code class="js">import Scroll from './lib/Scroll';
+
+// Create a new Scroll instance that triggers
+const scroll = new Scroll({
+    threshold: window.innerHeight / 2,
+    onBeforeThreshold: () => console.log('Before the threshold'),
+    onAfterThreshold: () => console.log('After the threshold')
+});
+
+// Animated scroll to a certain position on the page
+Scroll.to(offset, speed = 250);
+
+// Get the current scroll position in pixels.
+Scroll.getPosition();</code></pre>
+
+                <a name="js-socialmedia"></a>
+                <h3>Social Media</h3>
+                <pre><code class="js">import Share from './lib/Social/Share';
+
+// Import all available networks.
+import {
+    Facebook,
+    LinkedIn,
+    Twitter,
+    Xing
+} from './lib/Social/Networks';
+
+// Create the sharing registrar instance.
+const share = new Share(selector = '[data-social]');
+
+// Register the sharers.
+share.register('facebook', Facebook);
+share.register('linkedin', LinkedIn);
+share.register('twitter', Twitter);
+share.register('xing', Xing);
+
+// Boot the sharer and attach all needed event handlers.
+share.boot();</code></pre>
+
+                <a name="js-util"></a>
+                <h3>Utilities</h3>
+
+                <h4>Util.Orientation</h4>
+                <pre><code class="js">import { Orientation } from './Util';
+
+// Get the current device orientation
+Orientation.get(); // portait / landscape.
+
+// Listen to the orientation change event
+Orientation.onChange((e) => {
+    console.log(`The orientation changed to ${Orientation.get()}`);
+});</code></pre>
+
+                <h4>Util.Visibility</h4>
+                <pre><code class="js">import { Visibility } from './Util';
+
+const element = document.getElementById('my-awesome-element');
+
+// Determine that the element is visible.
+Visibility.isVisible(element);
+
+// Determine that the element is hidden.
+Visibility.isHidden(element);</code></pre>
+
+                <h4>Util.Window</h4>
+
+                <pre><code class="js">import { Window } from './Util';
+
+// Open a new popup window
+Window.open(url, width = 600, height = 450, center = true);</code></pre>
+
+            </article>
         </div>
     </div>
+
+    <script src="js/primer.min.js"></script>
+    <script>
+        Primer.boot(true);
+    </script>
 
 </body>
 </html>
