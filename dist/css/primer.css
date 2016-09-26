@@ -6,22 +6,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
      * 1. Change the default font family in all browsers (opinionated).
@@ -418,62 +402,6 @@ optgroup {
 textarea {
   overflow: auto; }
 
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -486,14 +414,6 @@ body {
   line-height: 1.5;
   color: #141414; }
 
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 [type=reset],
 [type=submit],
 button,
@@ -527,14 +447,6 @@ a:hover {
   user-select: none;
   background-color: white; }
 
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 .container {
   position: relative;
   padding: 1.875rem 0;
@@ -920,14 +832,6 @@ a:hover {
   .large-push-12 {
     margin-left: 100%; } }
 
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 img {
   opacity: 1;
   transition: opacity 0.3s; }
@@ -935,14 +839,6 @@ img {
 img[data-src] {
   opacity: 0; }
 
-/**
- * This file is part of the Centagon Primer package.
- *
- * (c) Centagon <contact@centagon.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 .panel {
   margin-bottom: 15px;
   margin-bottom: 0.9375rem;

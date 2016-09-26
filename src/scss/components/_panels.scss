@@ -1,6 +1,3 @@
-$panel-margin: config-get(get-gutters(), before);
-$panel-padding: config-get(get-gutters(), before);
-
 .panel {
     @include rem-calc(margin-bottom, $panel-margin);
     @include rem-calc(padding, $panel-padding);

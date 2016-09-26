@@ -1,10 +1,3 @@
-$button-padding: config-get($buttons, padding);
-$button-font-color: config-get($buttons, font-color);
-$button-font-size: config-get($buttons, font-size);
-$button-font-weight: config-get($buttons, font-weight);
-$button-line-height: config-get($buttons, line-height);
-$button-background: config-get($buttons, background-color);
-
 [type=reset],
 [type=submit],
 button,
@@ -35,5 +28,5 @@ a:hover {
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    background-color: $button-background;
+    background-color: $button-background-color;
 }

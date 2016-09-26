@@ -8,18 +8,30 @@ $susy: (
 );
 
 /// The base pixel size rem values will be calculated on.
+///
 /// @type Number
 $pixel-base: 16px;
 
+////
 /// Grid settings
-/// @type Map
-$grid: (
-    generate: true,
-    automatic-nesting: true,
-    container-limit: 1500px
-) !default;
+////
 
-/// Breakpoint settings
+/// Should primer automatically generate the grid css?
+///
+/// @type Bool
+/// @group Grid
+$grid-generate: true !default;
+
+/// Set the container limit. When this value is set to False the grid will
+/// automatically be set to stretch to the full width of the window.
+///
+/// @type Number
+/// @group Grid | Bool
+$grid-container-limit: 1500px !default;
+
+/// Breakpoint settings. You can add more breakpoints to this map.
+/// Grid classnames are generated on the breakpoint keys.
+///
 /// @type Map
 $breakpoints: (
     small: 0,
@@ -28,35 +40,113 @@ $breakpoints: (
 ) !default;
 
 /// Default color settings
+///
 /// @type Map
 $colors: (
     black: rgb(20, 20, 20),
     white: rgb(255, 255, 255),
     blue: rgb(64, 120, 192),
 
-    // ...
+    // ... moar colors ...
 ) !default;
 
+
+
+////
 /// Default font settings
-/// @type Map
-$font: (
-    antialiasing: true,
-    family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    size: 1rem,
-    line-height: 1.5,
-    color: map-get($colors, black)
-) !default;
+////
 
+/// Enable font antialiasing.
+///
+/// @type Bool
+/// @group Font
+$font-antialiasing: true !default;
+
+/// Default font family.
+///
+/// @type String
+/// @group Font
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+/// The default font-size.
+///
+/// @type Number.
+/// @group Font
+$font-size: 1rem !default;
+
+/// The default line height.
+///
+/// @type Number.
+/// @group Font
+$font-line-height: 1.5 !default;
+
+/// The default font color.
+///
+/// @type Color.
+/// @group Font
+$font-color: map-get($colors, black) !default;
+
+
+
+////
 /// Default button settings
-/// @type Map
-$buttons: (
-    font-size: map-get($font, size),
-    font-weight: normal,
-    font-color: map-get($colors, blue),
-    line-height: map-get($font, line-height),
-    background-color: map-get($colors, white),
-    padding: 0.5rem 1rem
-) !default;
+////
+
+/// The default font size of the buttons.
+///
+/// @type Number
+/// @group Button
+$button-font-size: $font-size !default;
+
+/// The default font-weight used on the buttons.
+///
+/// @type String
+/// @group Button
+$button-font-weight: normal !default;
+
+/// The default font color used on the buttons.
+///
+/// @type Color
+/// @group Button
+$button-font-color: map-get($colors, blue) !default;
+
+/// The default line height used on the buttons.
+///
+/// @type Number
+/// @group Button
+$button-line-height: $font-line-height !default;
+
+/// The default background color used on the buttons.
+///
+/// @type Color
+/// @group Button
+$button-background-color: map-get($colors, white) !default;
+
+/// The default button padding.
+///
+/// @type Number
+/// @group Button
+$button-padding: 0.5rem 1rem !default;
+
+
+
+////
+/// Default panel settings
+////
+
+/// The default panel margin.
+///
+/// @type Number
+/// @group Button
+$panel-margin: gutter() !default;
+
+/// The default panel padding.
+///
+/// @type Number
+/// @group Button
+$panel-padding: gutter() !default;
+
+
 
 /// Should images be lazily loaded?
 /// @type Bool
