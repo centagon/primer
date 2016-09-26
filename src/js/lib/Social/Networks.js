@@ -83,3 +83,14 @@ export class LinkedIn extends OpenGraphNetwork {
         return `http://www.linkedin.com/shareArticle?mini=true&url=${this.location}`;
     }
 }
+
+export class Xing extends OpenGraphNetwork {
+
+    /**
+     * Construct the Xing social sharing url.
+     * @returns {*}
+     */
+    get url() {
+        return `https://www.xing.com/spi/shares/new?url=${this.location}`;
+    }
+}
