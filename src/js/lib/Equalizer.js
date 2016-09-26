@@ -46,7 +46,7 @@ export default class Equalizer {
         const groups = {};
         const order = [];
 
-        _each(elements, (element) => {
+        _each(elements, element => {
             const group = element.getAttribute('data-equalize') || 'global';
 
             // Check the visibility of the element. Invisible elements do
@@ -68,10 +68,10 @@ export default class Equalizer {
 
         // Calculate the max height of the elements for each group.
         // Then apply that height to every element in the group.
-        order.forEach((group) => {
-            const max = Math.max.apply(null, groups[group].map((element) => element.offsetHeight));
+        order.forEach(group => {
+            const max = Math.max.apply(null, groups[group].map(element => element.offsetHeight));
 
-            groups[group].forEach((element) => {
+            groups[group].forEach(element => {
                 element.style.height = `${max}px`;
             });
         });
@@ -99,6 +99,6 @@ export default class Equalizer {
      * @returns {boolean}
      */
     static shouldEqualize() {
-        return !(Foundation.MediaQuery.current === 'small');
+        return ! (Foundation.MediaQuery.current === 'small');
     }
 }

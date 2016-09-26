@@ -15,7 +15,7 @@ export class Orientation {
         const support = 'onorientationchange' in window;
         const event = support ? 'orientation' : 'resize';
 
-        window.addEventListener(event, (e) => callback(e, Orientation.get()));
+        window.addEventListener(event, e => callback(e, Orientation.get()));
     }
 
     /**
@@ -52,7 +52,7 @@ export class Visibility {
      * @returns {boolean}
      */
     static isHidden(element) {
-        return !Visibility.isVisible(element);
+        return ! Visibility.isVisible(element);
     }
 }
 

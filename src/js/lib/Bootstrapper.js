@@ -34,6 +34,7 @@ export default class {
         // Suppress console loging when debugging is disabled.
         if (! debug) {
             global.console = {};
+
             console.log
                 = console.info
                 = console.warm
@@ -42,7 +43,7 @@ export default class {
             // Restore console loging.
             global.console = this.console;
 
-            console.warn(`Centagon Primer ${this.version} debug mode enabled!
+            global.console.warn(`Centagon Primer ${this.version} debug mode enabled!
 Please disable logging on production by calling (new Primer).boot(false);`);
         }
 
