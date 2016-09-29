@@ -12,6 +12,9 @@ $susy: (
 /// @type Number
 $pixel-base: 16px;
 
+$global-margin: gutter() !default;
+$global-padding: $global-margin !default;
+
 ////
 /// Grid settings
 ////
@@ -138,13 +141,13 @@ $button-padding: 0.5rem 1rem !default;
 ///
 /// @type Number
 /// @group Button
-$panel-margin: gutter() !default;
+$panel-margin: $global-margin !default;
 
 /// The default panel padding.
 ///
 /// @type Number
 /// @group Button
-$panel-padding: gutter() !default;
+$panel-padding: $global-padding !default;
 
 
 
