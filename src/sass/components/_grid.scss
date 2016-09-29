@@ -2,8 +2,10 @@
 
     // The main website wrapper.
     .container {
+        @include rem-calc(padding-top, $global-margin * 2);
+        @include rem-calc(padding-bottom, $global-margin * 2);
+
         position: relative;
-        padding: rem-calc(config-get(get-gutters(), before) * 2) 0;
         margin: 0 auto;
 
         @if $grid-container-limit != false {
@@ -17,8 +19,8 @@
 
     // Automatic handling of nested rows.
     .row .row {
-        margin-left: - config-get(get-gutters(), before);
-        margin-right: - config-get(get-gutters(), after);
+        @include rem-calc(margin-left, - $global-margin);
+        @include rem-calc(margin-right, - $global-margin);
     }
 
     @each $breakpoint, $value in $breakpoints {
