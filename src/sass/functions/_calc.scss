@@ -30,7 +30,7 @@
     // If the base font size is a %, then multiply it by 16px
     // This is because 100% font-size = 16px in most browsers.
     @if unit($base) == '%' {
-        $base: ($base / 100%) * 16px;
+        $base: ($base / 100%) * $pixel-base;
     }
 
     @if $count == 1 {
