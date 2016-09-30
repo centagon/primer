@@ -253,25 +253,13 @@ strip-unit($n);</code></pre>
 
                 <p>
                     It's easy to start using Primer's javascript components, just import the required components
-                    in your next ES6 compatible project or including the minified source directly on your HTML page.
-                </p>
-
-                <h4>Using the minified source</h4>
-                <p>
-                    When using the minified source code there are a couple if things you'll have to consider:
-                    <br>Including the source:
-                </p>
-                <pre><code class="html">&#x3C;script src=&#x22;/js/primer.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script&#x3E;Primer.boot();&#x3C;/script&#x3E;</code></pre>
-
-                <h4>Using ES6 imports</h4>
-                <p>
-                    The other (preferred) way is to just use ES6 imports.
-                    The component documentation code below uses imports.
+                    in your next ES6 compatible project.
                 </p>
 
                 <h4>Booting Primer</h4>
-                <pre><code class="js">Primer.boot(true);</code></pre>
+                <pre><code class="js">import Primer from './lib/Bootstrapper';
+
+Primer.boot(true);</code></pre>
                 <p>
                     By defaults, Primer boots into production mode disabling all console logging.
                     To counteract this behaviour just must pass <code>true</code> as the first argument on
