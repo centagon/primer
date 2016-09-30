@@ -12,14 +12,13 @@
 @import 'settings';
 
 // Import functions
-@import 'functions/util';
-@import 'functions/config';
 @import 'functions/calc';
 @import 'functions/color';
+@import 'functions/util';
 
 // Import mixins
-@import 'mixins/grid';
 @import 'mixins/calc';
+@import 'mixins/grid';
 
 // Import components
 @import 'components/base';

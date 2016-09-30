@@ -1,8 +1,0 @@
-@function config-get($map, $key) {
-    @if map-has-key($map, $key) {
-        @return map-get($map, $key);
-    }
-
-    @error "Unknown config `#{$key}`!";
-    @return null;
-}
