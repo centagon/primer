@@ -152,9 +152,11 @@ $panel-padding: $global-padding !default;
 
 
 /// Should images be lazily loaded?
+///
 /// @type Bool
 $lazyload-images: true !default;
 
 /// The global transition time limit.
+///
 /// @type Number
 $transition-time: 0.15s;

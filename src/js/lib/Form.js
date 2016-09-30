@@ -3,6 +3,7 @@ import _each from 'lodash/each';
 export default class {
 
     /**
+     * Register the swap state event handlers.
      *
      * @param  {string}  selector
      */
