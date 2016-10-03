@@ -33,20 +33,33 @@ export default class {
 
         // Suppress console loging when debugging is disabled.
         if (! debug) {
-            global.console = {};
-
-            console.log
-                = console.info
-                = console.warm
-                = console.error = () => {};
+            this.disableConsole();
         } else {
-            // Restore console loging.
-            global.console = this.console;
-
-            global.console.warn(`Centagon Primer ${this.version} debug mode enabled!
-Please disable logging on production by calling (new Primer).boot(false);`);
+            this.enableConsole();
         }
 
         return this;
+    }
+
+    /**
+     * Disable console logging.
+     */
+    disableConsole() {
+        global.console = {};
+
+        console.log
+            = console.info
+            = console.warm
+            = console.error = () => {};
+    }
+
+    /**
+     * Enable/Restore console logging.
+     */
+    enableConsole() {
+        global.console = this.console;
+
+        global.console.warn(`Centagon Primer ${this.version} debug mode enabled!
+Please disable logging on production by calling (new Primer).boot(false);`);
     }
 }
