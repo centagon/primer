@@ -25,6 +25,12 @@ $global-padding: $global-margin !default;
 /// @group Grid
 $grid-generate: true !default;
 
+/// Whether or not to boot in the debug mode.
+/// When debug is enabled, the debug image is shown on grid elements.
+///
+/// @type Bool
+$grid-debug: true !default;
+
 /// Set the container limit. When this value is set to False the grid will
 /// automatically be set to stretch to the full width of the window.
 ///

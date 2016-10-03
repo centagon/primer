@@ -1,3 +1,15 @@
+// Set the debug mode.
+@if $grid-debug {
+    @include susy-set(debug, (image: show-columns));
+}
+
+// Set the box-sizing.
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
 @if $font-antialiasing {
     html {
         text-rendering: optimizeLegibility;
