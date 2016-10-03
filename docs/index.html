@@ -7,7 +7,7 @@
 
     <title>Centagon Primer Docs</title>
 
-    <link rel="stylesheet" href="css/primer.css">
+    <link rel="stylesheet" href="../dist/css/primer.css">
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-dark.min.css">
 
@@ -94,6 +94,17 @@
 
                 <a name="scss-buttons"></a>
                 <h3>Buttons</h3>
+
+                <h4>Button example</h4>
+
+                <pre><code class="html">&#x3C;a href=&#x22;#&#x22; class=&#x22;button&#x22;&#x3E;Anchor&#x3C;/a&#x3E;
+&#x3C;button class=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;input type=&#x22;submit&#x22; class=&#x22;button&#x22; value=&#x22;Submit&#x22;&#x3E;</code></pre>
+
+                <a href="#" class="button">Anchor</a>
+                <button class="button">Button</button>
+                <input type="submit" class="button" value="Submit">
+
                 <p>
                     Primer tries to not force too much default styling on your elements.
                     That's why buttons only set default properties like margins and padding to distinguish
@@ -124,6 +135,11 @@ $button-line-height: $font-line-height;
 /// @type Color
 $button-background-color: map-get($colors, white);
 
+/// The default button border.
+///
+/// @type mixed
+$button-border: 1px solid map-get($colors, blue);
+
 /// The default button padding.
 ///
 /// @type Number
@@ -131,6 +147,109 @@ $button-padding: 0.5rem 1rem;</code></pre>
 
                 <a name="scss-grid"></a>
                 <h3>Grid</h3>
+
+                <pre><code class="html">&#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;div class=&#x22;row&#x22;&#x3E;
+        &#x3C;div class=&#x22;small-12 medium-4 large-2&#x22;&#x3E;...&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;small-12 medium-8 large-10&#x22;&#x3E;...&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+
+                <h4>Small grid example</h4>
+
+                <div class="row">
+                    <div class="small-1"><span class="column"></span></div>
+                    <div class="small-11"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-2"><span class="column"></span></div>
+                    <div class="small-10"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-3"><span class="column"></span></div>
+                    <div class="small-9"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-4"><span class="column"></span></div>
+                    <div class="small-8"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-5"><span class="column"></span></div>
+                    <div class="small-7"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="small-6"><span class="column"></span></div>
+                    <div class="small-6"><span class="column"></span></div>
+                </div>
+
+                <h4>Medium grid example</h4>
+
+                <div class="row">
+                    <div class="medium-1"><span class="column"></span></div>
+                    <div class="medium-11"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="medium-2"><span class="column"></span></div>
+                    <div class="medium-10"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="medium-3"><span class="column"></span></div>
+                    <div class="medium-9"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="medium-4"><span class="column"></span></div>
+                    <div class="medium-8"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="medium-5"><span class="column"></span></div>
+                    <div class="medium-7"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="medium-6"><span class="column"></span></div>
+                    <div class="medium-6"><span class="column"></span></div>
+                </div>
+
+                <h4>Large grid example</h4>
+
+                <div class="row">
+                    <div class="large-1"><span class="column"></span></div>
+                    <div class="large-11"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="large-2"><span class="column"></span></div>
+                    <div class="large-10"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="large-3"><span class="column"></span></div>
+                    <div class="large-9"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="large-4"><span class="column"></span></div>
+                    <div class="large-8"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="large-5"><span class="column"></span></div>
+                    <div class="large-7"><span class="column"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="large-6"><span class="column"></span></div>
+                    <div class="large-6"><span class="column"></span></div>
+                </div>
 
                 <h4>Grid settings</h4>
                 <pre><code class="scss">/// Susy settings
@@ -180,6 +299,15 @@ $lazyload-images: true;</code></pre>
 
                 <a name="scss-panels"></a>
                 <h3>Panels</h3>
+
+                <h4>Panel example</h4>
+                <pre><code class="html">&#x3C;div class=&#x22;panel&#x22;&#x3E;
+    &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet debitis deleniti dolorem doloribus earum expedita id ipsum itaque quas quidem quo reiciendis repellat rerum sed tempora, totam velit voluptate voluptatem!</p>
+                </div>
+
                 <pre><code class="scss">/// The default panel margin.
 ///
 /// @type Number
@@ -188,7 +316,12 @@ $panel-margin: $global-margin;
 /// The default panel padding.
 ///
 /// @type Number
-$panel-padding: $global-padding;</code></pre>
+$panel-padding: $global-padding;
+
+/// The default panel border.
+///
+/// @type mixed
+$panel-border: 1px solid map-get($colors, black);</code></pre>
 
                 <a name="scss-typography"></a>
                 <h3>Typograpgy</h3>
