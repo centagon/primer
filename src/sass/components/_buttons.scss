@@ -8,12 +8,7 @@ html [type=button] {
 
 a,
 button {
-    color: $button-font-color;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .button {
@@ -21,6 +16,7 @@ a:hover {
     @include rem-calc(font-size, $button-font-size);
 
     display: inline-block;
+    color: $button-font-color;
     font-weight: $button-font-weight;
     line-height: $button-line-height;
     text-align: center;
@@ -29,4 +25,12 @@ a:hover {
     cursor: pointer;
     user-select: none;
     background-color: $button-background-color;
+
+    @if $button-border != false {
+        border: $button-border;
+    }
+
+    :focus {
+        outline: -webkit-focus-ring-color auto 5px;
+    }
 }

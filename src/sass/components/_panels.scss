@@ -2,5 +2,5 @@
     @include rem-calc(margin-bottom, $panel-margin);
     @include rem-calc(padding, $panel-padding);
 
-    border: 1px solid color-get(black);
+    border: $panel-border;
 }

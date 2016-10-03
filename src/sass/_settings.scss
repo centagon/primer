@@ -131,6 +131,12 @@ $button-line-height: $font-line-height !default;
 /// @group Button
 $button-background-color: map-get($colors, white) !default;
 
+/// The default button border.
+///
+/// @type mixed
+/// @group Button
+$button-border: 1px solid map-get($colors, blue) !default;
+
 /// The default button padding.
 ///
 /// @type Number
@@ -146,14 +152,20 @@ $button-padding: 0.5rem 1rem !default;
 /// The default panel margin.
 ///
 /// @type Number
-/// @group Button
+/// @group Panel
 $panel-margin: $global-margin !default;
 
 /// The default panel padding.
 ///
 /// @type Number
-/// @group Button
+/// @group Panel
 $panel-padding: $global-padding !default;
+
+/// The default panel border.
+///
+/// @type mxied
+/// @group Panel
+$panel-border: 1px solid map-get($colors, black) !default;
 
 
 
