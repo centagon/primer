@@ -98,6 +98,20 @@ export class Window {
 
         window.open(url, '', `width=${width},height=${height},top=${top},left=${left}`);
     }
+
+    /**
+     * @callback Window~OnResize
+     * @param    {Event}   event
+     */
+    /**
+     * Listen to an resize event and
+     * execute the supplied callback.
+     *
+     * @param  {Window~OnResize}  callback
+     */
+    static onResize(callback) {
+        window.onresize = (e) => callback(e)
+    }
 }
 
 export class String {
