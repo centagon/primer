@@ -1,4 +1,4 @@
-# Centagon Primer
+![Centagon Primer](https://centagon.github.io/primer/img/primer-logo.png)
 
 [![Bower version](https://badge.fury.io/bo/centagon-primer.svg)](https://badge.fury.io/bo/centagon-primer)
 
