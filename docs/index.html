@@ -399,7 +399,7 @@ strip-unit($n);</code></pre>
                 <h4>Booting Primer</h4>
                 <pre><code class="js">import Primer from './lib/Bootstrapper';
 
-Primer.boot(true);</code></pre>
+(new Primer).boot(true);</code></pre>
                 <p>
                     By defaults, Primer boots into production mode disabling all console logging.
                     To counteract this behaviour just must pass <code>true</code> as the first argument on
