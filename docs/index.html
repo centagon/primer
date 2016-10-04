@@ -484,13 +484,22 @@ share.boot();</code></pre>
                 <a name="js-util"></a>
                 <h3>Utilities</h3>
 
+                <h4>Util.Element</h4>
+                <pre><code class="js">import { Element } from './Util';
+
+// Get the elements computed styles
+Element.getStyles(document.querySelector('.my-element'));
+
+// Get a specific computed style.
+Element.getStyle(document.querySelector('.my-element'));</code></pre>
+
                 <h4>Util.Orientation</h4>
                 <pre><code class="js">import { Orientation } from './Util';
 
 // Get the current device orientation
 Orientation.get(); // portait / landscape.
 
-// Listen to the orientation change event
+// Listen to the orientation change event and execute a callback.
 Orientation.onChange((e) => {
     console.log(`The orientation changed to ${Orientation.get()}`);
 });</code></pre>
@@ -511,7 +520,18 @@ Visibility.isHidden(element);</code></pre>
                 <pre><code class="js">import { Window } from './Util';
 
 // Open a new popup window
-Window.open(url, width = 600, height = 450, center = true);</code></pre>
+Window.open(url, width = 600, height = 450, center = true);
+
+// Listen to an resize event and execute the supplied callback.
+Window.onResize((e) => {
+    console.log('The window is resized.');
+});</code></pre>
+
+                <h4>Util.String</h4>
+                <pre><code class="js">import { String } from './Util';
+
+// Decode a string into an object.
+String.toObject('a=foo&b=bar'); // { a: 'foo', b: 'bar' }</code></pre>
 
             </article>
         </div>
