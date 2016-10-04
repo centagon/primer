@@ -11,3 +11,15 @@
 @function strip-unit($n) {
     @return $n / ($n * 0 + 1);
 }
+
+@function serialize-map($map) {
+    $str: '';
+
+    @each $key, $value in $map {
+        $str: $str + $key + '=' + ($value) + '&';
+    }
+
+    $str: str-slice($str, 1, -2);
+
+    @return $str;
+}
