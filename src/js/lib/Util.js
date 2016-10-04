@@ -1,3 +1,29 @@
+export class Element {
+
+    /**
+     * Get a computed style property of an element.
+     *
+     * @param  {Element}  element
+     * @param  {string}   property
+     *
+     * @returns {string}
+     */
+    static getStyle(element, property) {
+        return Element.getStyles(element).getPropertyValue(property);
+    }
+
+    /**
+     * Get the computed styles on an element.
+     *
+     * @param   {Element}  element
+     *
+     * @returns {CSSStyleDeclaration}
+     */
+    static getStyles(element) {
+        return window.getComputedStyle(element, null);
+    }
+}
+
 export class Orientation {
 
     /**
