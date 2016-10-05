@@ -17,6 +17,13 @@
         @include container;
     }
 
+    // Same as the .row class but without a forced max width.
+    .fluid-row {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     // Automatic handling of nested rows.
     .row .row {
         @include rem-calc(margin-left, - $global-margin);
