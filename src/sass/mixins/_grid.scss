@@ -11,3 +11,9 @@
         @include push($size);
     }
 }
+
+@mixin breakpoint($name) {
+    @include susy-media(map-get($breakpoints, $name)) {
+        @content;
+    }
+}
