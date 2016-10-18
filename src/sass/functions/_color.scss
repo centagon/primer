@@ -1,8 +1,12 @@
-@function color-get($color) {
-    @if (map-has-key($colors, $color)) {
+@function color-get($color, $variant: false) {
+    @if $variant and type-of(map-get($colors, $color)) == map {
+        @return map-get(color-get($color), $variant);
+    }
+
+    @if map-has-key($colors, $color) {
         @return map-get($colors, $color);
     }
 
-    @warn "Unknown color `#{$color}`!";
+    @error "Unknown color `#{$color}`!";
     @return null;
 }
