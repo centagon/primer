@@ -1,7 +1,7 @@
 /* global $ */
-/* global Foundation */
 
 import { Visibility, Orientation } from './Util';
+import MediaQuery from './MediaQuery';
 import _each from 'lodash/each';
 
 export default class Equalizer {
@@ -13,6 +13,7 @@ export default class Equalizer {
      */
     constructor(selector = '.equalized') {
         this.selector = selector;
+        this.mediaquery = new MediaQuery();
     }
 
     /**
@@ -99,6 +100,6 @@ export default class Equalizer {
      * @returns {boolean}
      */
     static shouldEqualize() {
-        return ! (Foundation.MediaQuery.current === 'small');
+        return ! (this.mediaquery.getCurrent() === 'small');
     }
 }
