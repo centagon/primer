@@ -125,15 +125,15 @@ export class String {
      */
     static toObject(str) {
         return str.split('&').reduce((ret, param) => {
-            let parts = param.replace(/\+/g, ' ').split('=');
+            const parts = param.replace(/\+/g, ' ').split('=');
             let key = parts[0];
             let val = parts[1];
 
             key = decodeURIComponent(key);
 
-            val = val === undefined ? null: decodeURIComponent(val);
+            val = val === undefined ? null : decodeURIComponent(val);
 
-            if (!ret.hasOwnProperty(key)) {
+            if (! ret.hasOwnProperty(key)) {
                 ret[key] = val;
             } else if (Array.isArray(ret[key])) {
                 ret[key].push(val);
