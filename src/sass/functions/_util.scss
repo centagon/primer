@@ -23,3 +23,17 @@
 
     @return $str;
 }
+
+/// Map deep get
+///
+/// @function  map-deep-get
+/// @param     {Map}      $map
+/// @param     {Arglist}  $keys
+/// @return    {*}
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    
+    @return $map;
+}
