@@ -1,3 +1,5 @@
+@import 'functions/util';
+
 /// Susy settings
 /// @type Map
 $susy: (
@@ -48,13 +50,19 @@ $breakpoints: (
     large: 64em,
 ) !default;
 
-/// Default color settings
+/// Default color settings. Colors can be a single value
+/// or a map of colors acting like a color palette.
 ///
 /// @type Map
 $colors: (
     black: rgb(20, 20, 20),
     white: rgb(255, 255, 255),
-    blue: rgb(64, 120, 192),
+    blue: (
+        // Blue variants
+        aqua: rgb(127, 219, 255),
+        normal: rgb(0, 116, 217),
+        navy: rgb(0, 31, 63)
+    ),
 
     // ... moar colors ...
 ) !default;
@@ -117,7 +125,7 @@ $button-font-weight: normal !default;
 ///
 /// @type Color
 /// @group Button
-$button-font-color: map-get($colors, blue) !default;
+$button-font-color: map-deep-get($colors, blue, normal) !default;
 
 /// The default line height used on the buttons.
 ///
@@ -135,7 +143,7 @@ $button-background-color: map-get($colors, white) !default;
 ///
 /// @type mixed
 /// @group Button
-$button-border: 1px solid map-get($colors, blue) !default;
+$button-border: 1px solid map-deep-get($colors, blue, normal) !default;
 
 /// The default button padding.
 ///
