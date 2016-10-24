@@ -23,3 +23,27 @@
     @error "Unknown color `#{$color}`!";
     @return null;
 }
+
+/// Create a map of available colors.
+///
+/// @function  color-palette
+/// @prop      {String}  $separator
+/// @return    {Map}
+@function color-palette($separator: '-') {
+    $palette: ();
+
+    @each $name, $color in $colors {
+
+        // If the color is a map, then we need to loop over it
+        // before adding it to our palette of colors.
+        @if type-of($color) == map {
+            @each $map-name, $map-color in $color {
+                $palette: map-merge($palette, ("#{$name}#{$separator}#{$map-name}": $map-color));
+            }
+        } @else {
+            $palette: map-merge($palette, ($name: $color));
+        }
+    }
+
+    @return $palette;
+}
