@@ -1,19 +1,3 @@
-/// Recursively apply a function to a set of values.
-///
-/// @function apply-fn
-/// @param    {*}  $fn
-/// @param    {*}  $values
-/// @return   {*}
-@function apply-fn($fn, $values) {
-    $new-values: ();
-
-    @each $value in $values {
-        $new-values: append($new-values, call($fn, $value), list-separator($values));
-    }
-
-    @return $new-values;
-}
-
 /// Strip the unit of a number
 ///
 /// @function  strip-unit
