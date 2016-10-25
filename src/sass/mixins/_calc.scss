@@ -1,4 +1,0 @@
-@mixin rem-calc($property, $values) {
-    #{$property}: $values;
-    #{$property}: apply-fn(rem-calc, $values);
-}

@@ -23,9 +23,8 @@
 }
 
 body {
-    @include rem-calc(font-size, $font-size);
-
     font-family: $font-family;
+    font-size: rem-calc($font-size);
     line-height: $font-line-height;
     color: $font-color;
 }

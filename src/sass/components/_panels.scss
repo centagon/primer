@@ -1,6 +1,5 @@
 .panel {
-    @include rem-calc(margin-bottom, $panel-margin);
-    @include rem-calc(padding, $panel-padding);
-
+    margin-bottom: rem-calc($panel-margin);
+    padding: rem-calc($panel-padding);
     border: $panel-border;
 }

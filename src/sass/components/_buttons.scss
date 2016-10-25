@@ -12,11 +12,10 @@ button {
 }
 
 .button {
-    @include rem-calc(padding, $button-padding);
-    @include rem-calc(font-size, $button-font-size);
-
     display: inline-block;
+    padding: rem-calc($button-padding);
     color: $button-font-color;
+    font-size: rem-calc($button-font-size);
     font-weight: $button-font-weight;
     line-height: $button-line-height;
     text-align: center;

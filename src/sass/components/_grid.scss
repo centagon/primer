@@ -2,14 +2,13 @@
 
     // The main website wrapper.
     .container {
-        @include rem-calc(padding-top, $global-margin * 2);
-        @include rem-calc(padding-bottom, $global-margin * 2);
-
         position: relative;
         margin: 0 auto;
+        padding-top: rem-calc($global-margin * 2);
+        padding-bottom: rem-calc($global-margin * 2);
 
         @if $grid-container-limit != false {
-            max-width: $grid-container-limit;
+            max-width: rem-calc($grid-container-limit);
         }
     }
 
@@ -26,8 +25,8 @@
 
     // Automatic handling of nested rows.
     .row .row {
-        @include rem-calc(margin-left, - $global-margin);
-        @include rem-calc(margin-right, - $global-margin);
+        margin-left: rem-calc($global-margin);
+        margin-right: rem-calc($global-margin);
     }
 
     @each $breakpoint, $value in $breakpoints {
