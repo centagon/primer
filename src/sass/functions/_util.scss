@@ -1,3 +1,9 @@
+/// Recursively apply a function to a set of values.
+///
+/// @function apply-fn
+/// @param    {*}  $fn
+/// @param    {*}  $values
+/// @return   {*}
 @function apply-fn($fn, $values) {
     $new-values: ();
 
