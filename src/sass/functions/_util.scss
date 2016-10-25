@@ -12,6 +12,12 @@
     @return $n / ($n * 0 + 1);
 }
 
+/// Convert a map into a serialized string.
+/// foo=bar&bar=baz
+///
+/// @function  serialize-map
+/// @param     {Map}  $map
+/// @return    {String}
 @function serialize-map($map) {
     $str: '';
 
