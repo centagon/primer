@@ -1,9 +1,0 @@
-@mixin rem-calc($property, $values) {
-    $fallback: apply-fn(rem-calc, $values);
-
-    @if $fallback != $values {
-        #{$property}: $fallback;
-    }
-
-    #{$property}: $values;
-}

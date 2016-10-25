@@ -1,3 +1,9 @@
+/// Recursively apply a function to a set of values.
+///
+/// @function apply-fn
+/// @param    {*}  $fn
+/// @param    {*}  $values
+/// @return   {*}
 @function apply-fn($fn, $values) {
     $new-values: ();
 
@@ -8,10 +14,21 @@
     @return $new-values;
 }
 
+/// Strip the unit of a number
+///
+/// @function  strip-unit
+/// @param     {*}  $n
+/// @return    {Number}
 @function strip-unit($n) {
     @return $n / ($n * 0 + 1);
 }
 
+/// Convert a map into a serialized string.
+/// foo=bar&bar=baz
+///
+/// @function  serialize-map
+/// @param     {Map}  $map
+/// @return    {String}
 @function serialize-map($map) {
     $str: '';
 
