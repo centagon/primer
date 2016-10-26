@@ -1,6 +1,22 @@
 export class Element {
 
     /**
+     * Determine that the element is "in view".
+     *
+     * @param   {Element}  element
+     *
+     * @returns {boolean}
+     */
+    static inView(element) {
+        const rect = element.getBoundingClientRect();
+
+        return rect.top >= 0
+            && rect.left >= 0
+            && rect.bottom <= Window.height()
+            && rect.right <= Window.width();
+    }
+
+    /**
      * Get a computed style property of an element.
      *
      * @param  {Element}  element
