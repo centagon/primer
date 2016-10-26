@@ -112,6 +112,24 @@ export class Window {
     static onResize(callback) {
         window.onresize = (e) => callback(e)
     }
+
+    /**
+     * Get the width of the current window.
+     *
+     * @returns {Number|number}
+     */
+    static width() {
+        return window.innerHeight || document.documentElement.clientHeight;
+    }
+
+    /**
+     * Get the height of the current window.
+     *
+     * @returns {Number|number}
+     */
+    static height() {
+        return window.innerWidth || document.documentElement.clientWidth;
+    }
 }
 
 export class String {
