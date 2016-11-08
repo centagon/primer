@@ -146,6 +146,29 @@ export class Window {
     static height() {
         return window.innerWidth || document.documentElement.clientWidth;
     }
+
+    /**
+     * Get the center position of the window.
+     *
+     * @param   {number}  w
+     * @param   {number}  h
+     * 
+     * @returns {{top: *, left: *}}
+     */
+    static getCenter(w, h) {
+        const dualScreenLeft = window.screenLeft != 'undefined'
+            ? window.screenLeft
+            : screen.left;
+
+        const dualScreenTop = window.screenTop != 'undefined'
+            ? window.screenTop
+            : screen.top;
+
+        const left = ((Window.width() / 2) - (w / 2)) + dualScreenLeft;
+        const top = ((Window.height() /  2) - (h / 2)) + dualScreenTop;
+
+        return { top, left };
+    }
 }
 
 export class String {
