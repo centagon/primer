@@ -38,7 +38,15 @@
         // before adding it to our palette of colors.
         @if type-of($color) == map {
             @each $map-name, $map-color in $color {
-                $palette: map-merge($palette, ("#{$name}#{$separator}#{$map-name}": $map-color));
+
+                // If the default key is found then we can safely
+                // unset the map-name and separator values.
+                @if $map-name == '_default' {
+                    $map-name: '';
+                    $current-separator: '';
+                }
+
+                $palette: map-merge($palette, ("#{$name}#{$current-separator}#{$map-name}": $map-color));
             }
         } @else {
             $palette: map-merge($palette, ($name: $color));
