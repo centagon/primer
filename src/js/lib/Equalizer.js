@@ -28,6 +28,8 @@ export default class Equalizer {
             if (query !== 'small') this.equalize();
         });
 
+        $(document).on('primer.reflow', () => this.reflow());
+
         Orientation.onChange(() => {
             if (this.shouldEqualize()) {
                 this.equalize();
@@ -88,6 +90,16 @@ export default class Equalizer {
 
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.height = null;
+        }
+    }
+
+    /**
+     * Reflow the equalizer.
+     */
+    reflow() {
+        if (this.shouldEqualize()) {
+            this.reset();
+            this.equalize();
         }
     }
 

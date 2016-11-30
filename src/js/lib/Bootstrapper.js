@@ -42,6 +42,13 @@ export default class {
     }
 
     /**
+     * Triggers a reflow event that other 'modules' can listen to.
+     */
+    reflow() {
+        $(document).trigger('primer.reflow');
+    }
+
+    /**
      * Disable console logging.
      */
     disableConsole() {
