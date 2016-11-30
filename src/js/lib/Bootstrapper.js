@@ -32,7 +32,7 @@ export default class {
         this.debug = debug;
 
         // Suppress console loging when debugging is disabled.
-        if (! debug) {
+        if ( ! debug) {
             this.disableConsole();
         } else {
             this.enableConsole();

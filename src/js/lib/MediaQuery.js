@@ -37,7 +37,7 @@ export default class {
      */
     parseStyles(parsedStyles) {
         for (let key in parsedStyles) {
-            if (! parsedStyles.hasOwnProperty(key)) {
+            if ( ! parsedStyles.hasOwnProperty(key)) {
                 break;
             }
 

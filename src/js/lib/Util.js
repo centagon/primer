@@ -190,7 +190,7 @@ export class String {
 
             val = val === undefined ? null : decodeURIComponent(val);
 
-            if (! ret.hasOwnProperty(key)) {
+            if ( ! ret.hasOwnProperty(key)) {
                 ret[key] = val;
             } else if (Array.isArray(ret[key])) {
                 ret[key].push(val);
