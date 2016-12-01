@@ -1,5 +1,5 @@
 $alignments: (
-    left, center, right
+    left, center, right,
 );
 
 @each $align in $alignments {

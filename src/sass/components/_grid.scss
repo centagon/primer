@@ -37,14 +37,26 @@
         }
     }
 
-    // Floating classes.
-    .float-left { float: left; }
-    .float-right { float: right; }
+    /**
+     * Floating classes.
+     */
+    .float-left {
+        float: left;
+    }
+
+    .float-right {
+        float: right;
+    }
 
     @each $breakpoint, $value in $breakpoints {
         @include susy-media($value) {
-            .#{$breakpoint}-float-left { float: left; }
-            .#{$breakpoint}-float-right { float: right; }
+            .#{$breakpoint}-float-left {
+                float: left;
+            }
+
+            .#{$breakpoint}-float-right {
+                float: right;
+            }
         }
     }
 }

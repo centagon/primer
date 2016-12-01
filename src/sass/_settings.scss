@@ -58,13 +58,12 @@ $colors: (
     black: rgb(20, 20, 20),
     white: rgb(255, 255, 255),
     blue: (
+
         // Blue variants
+        _default: rgb(0, 116, 217),
         aqua: rgb(127, 219, 255),
-        normal: rgb(0, 116, 217),
         navy: rgb(0, 31, 63)
     ),
-
-    // ... moar colors ...
 ) !default;
 
 
