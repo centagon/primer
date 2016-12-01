@@ -175,6 +175,47 @@ $panel-padding: $global-padding !default;
 $panel-border: 1px solid map-get($colors, black) !default;
 
 
+////
+/// Default tab settings
+////
+
+/// The default tab padding.
+///
+/// @type Number
+/// @group Tab
+$tab-padding: $global-padding !default;
+
+/// The default tab border color.
+///
+/// @type Color
+/// @group Tab
+$tab-border-color: map-get($colors, black) !default;
+
+/// The default tab background color.
+///
+/// @type Color
+/// @group Tab
+$tab-background-color: map-get($colors, white) !default;
+
+/// The default tab hover background color.
+///
+/// @type Color
+/// @group Tab
+$tab-hover-background-color: map-get($colors, black) !default;
+
+/// The default tab font color.
+///
+/// @type Color
+/// @group Tab
+$tab-font-color: map-get($colors, black) !default;
+
+/// The default tab hover color for the text.
+///
+/// @type Color
+/// @group Tab
+$tab-hover-font-color: map-get($colors, white) !default;
+
+
 
 /// Should images be lazily loaded?
 ///
