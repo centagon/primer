@@ -3,8 +3,16 @@
     padding-left: 0;
 
     @include element(inline) {
-        & li {
+        li {
             display: inline-block;
+        }
+
+        @include modifier(flex) {
+            display: flex;
+
+            li {
+                width: 100%;
+            }
         }
     }
 }
