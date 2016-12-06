@@ -12,7 +12,7 @@ export default class {
 
         const element = document.getElementById(selector);
 
-        this.parseStyles(String.toObject(Element.getStyle(element, 'font-family')));
+        this.parseStyles(String.toObject(Element.getStyle(element, 'font-family').replace('"','')));
 
         this.current = this.getCurrent();
     }
