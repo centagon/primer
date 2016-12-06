@@ -56,7 +56,7 @@ export default class Equalizer {
             // not consume any space in the document so we cannot
             // reliably calculate the height of this element.
             if (Visibility.isVisible(element) && this.shouldEqualize()) {
-                if (!groups[group]) {
+                if ( ! groups[group]) {
                     groups[group] = [];
 
                     // Append the group to the beginning of the ordering array.
@@ -112,8 +112,12 @@ export default class Equalizer {
      * @returns {boolean}
      */
     shouldEqualize() {
-        const q = this.mediaquery.getCurrent();
-        if (!q) return false;
-        return ! (this.mediaquery.getCurrent().name === 'small');
+        const query = this.mediaquery.getCurrent();
+
+        if ( ! query) {
+            return false;
+        }
+
+        return query.name !== 'small';
     }
 }
