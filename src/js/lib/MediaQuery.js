@@ -54,7 +54,7 @@ export default class {
      * @returns {object}
      */
     getCurrent() {
-        var matched;
+        let matched = null;
 
         for (let i = 0; i < this.queries.length; i++) {
             let query = this.queries[i];
