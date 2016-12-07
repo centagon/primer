@@ -33,7 +33,7 @@ export default class Share {
      * Boot the map of social media networks.
      */
     boot() {
-        this.networks.forEach((network, Instance) => {
+        _each(this.networks, (Instance, network) => {
             this.networks[network] = new Instance(this);
         });
 
