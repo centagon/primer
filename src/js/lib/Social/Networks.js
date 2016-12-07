@@ -1,4 +1,4 @@
-class Network {
+export class Network {
 
     /**
      * Get the current location.
