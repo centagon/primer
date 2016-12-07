@@ -59,6 +59,9 @@ export default class Share {
     onClick(element) {
         const network = this.networks[element.getAttribute(this.selector)];
 
-        Window.open(network.url);
+        if (network) {
+            Window.open(network.url);
+        }
+        
     }
 }
