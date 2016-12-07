@@ -16,6 +16,11 @@ export default class
         this.registerEvents();
     }
     
+    /**
+     * registerEvents()
+     * 
+     * @returns {EventTriggers}
+     */
     registerEvents() {
         
         $(this.selector).click( function (e) {
@@ -24,33 +29,56 @@ export default class
             $(document).trigger('event-trigger',$(this).attr('data-trigger-event') || $(this).attr('data-onclick-visibility'));
         });
         
+        $(document).on('state-toggle', (e,p) => {
+            $(document).trigger('event-trigger', p.event);
+        });
+        
+        this.registerVisibilityEvents();
+        
         $(document).on('event-trigger', (e,p) => {
-            var match = false;
             var eventAttr;
                     
             var buffer = [];
             
             eventAttr = 'data-state-event';
             this.getEventListeners(eventAttr, p, buffer, (listener) => {
-                this.toggleState(listener);
+                $(document).trigger('event-toggle-visibility', listener);
             });
             
             eventAttr = 'data-state-toggler';
             this.getEventListeners(eventAttr, p, buffer, (listener) => {
-                this.toggleState(listener);
+                $(document).trigger('event-toggle-visibility', listener);
             });
             
             eventAttr = 'data-state-enabler';
             this.getEventListeners(eventAttr, p, buffer, (listener) => {
-                this.enableState(listener);
+                $(document).trigger('event-enable-visibility', listener);
             });
             
             eventAttr = 'data-state-disabler';
             this.getEventListeners(eventAttr, p, buffer, (listener) => {
-                this.disableState(listener);
+                $(document).trigger('event-disable-visibility', listener);
             });
             
         });
+        
+        return this;
+    }
+    
+    registerVisibilityEvents() {
+        $(document).on('event-enable-visibility', (e,target) => {
+            this.enableState(target);
+        });
+        
+        $(document).on('event-disable-visibility', (e,target) => {
+            this.disableState(target);
+        });
+        
+        $(document).on('event-toggle-visibility', (e,target) => {
+            this.toggleState(target);
+        });
+        
+        return this;
     }
     
     getEventListeners(eventAttr, match, buffer = [], f = null) {
