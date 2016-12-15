@@ -38,6 +38,8 @@
         // before adding it to our palette of colors.
         @if type-of($color) == map {
             @each $map-name, $map-color in $color {
+                
+                $current-separator: $separator;
 
                 // If the default key is found then we can safely
                 // unset the map-name and separator values.
