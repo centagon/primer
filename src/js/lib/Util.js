@@ -1,4 +1,4 @@
-export class Element {
+class Element {
 
     /**
      * Determine that the element is "in view".
@@ -40,7 +40,7 @@ export class Element {
     }
 }
 
-export class Orientation {
+class Orientation {
 
     /**
      * @callback Orientation~OnChange
@@ -70,7 +70,7 @@ export class Orientation {
     }
 }
 
-export class Visibility {
+class Visibility {
 
     /**
      * Find out if the given element is visibile.
@@ -98,7 +98,7 @@ export class Visibility {
     }
 }
 
-export class Window {
+class Window {
 
     /**
      * Open a new popup window.
@@ -171,7 +171,7 @@ export class Window {
     }
 }
 
-export class String {
+class String {
 
     /**
      * Decode a string into an object.
@@ -201,4 +201,20 @@ export class String {
             return ret;
         }, {});
     }
+}
+
+export {
+    Element,
+    Orientation,
+    Visibility,
+    Window,
+    String
+}
+
+export default {
+    Element,
+    Orientation,
+    Visibility,
+    Window,
+    String
 }

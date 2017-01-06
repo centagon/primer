@@ -1,4 +1,4 @@
-export class Network {
+class Network {
 
     /**
      * Get the current location.
@@ -35,7 +35,7 @@ class OpenGraphNetwork extends Network {
     }
 }
 
-export class Twitter extends Network {
+class Twitter extends Network {
 
     /**
      * Construct the Twitter title from the twitter:description property.
@@ -60,7 +60,7 @@ export class Twitter extends Network {
     }
 }
 
-export class Facebook extends OpenGraphNetwork {
+class Facebook extends OpenGraphNetwork {
 
     /**
      * Construct the Facebook social sharing url.
@@ -72,7 +72,7 @@ export class Facebook extends OpenGraphNetwork {
     }
 }
 
-export class LinkedIn extends OpenGraphNetwork {
+class LinkedIn extends OpenGraphNetwork {
 
     /**
      * Construct the LinkedIn social sharing url.
@@ -84,7 +84,7 @@ export class LinkedIn extends OpenGraphNetwork {
     }
 }
 
-export class Xing extends OpenGraphNetwork {
+class Xing extends OpenGraphNetwork {
 
     /**
      * Construct the Xing social sharing url.
@@ -93,4 +93,24 @@ export class Xing extends OpenGraphNetwork {
     get url() {
         return `https://www.xing.com/spi/shares/new?url=${this.location}`;
     }
+}
+
+
+export {
+    Network,
+    OpenGraphNetwork,
+    Xing,
+    LinkedIn,
+    Facebook,
+    Twitter
+}
+
+
+export default {
+    Network,
+    OpenGraphNetwork,
+    Xing,
+    LinkedIn,
+    Facebook,
+    Twitter
 }

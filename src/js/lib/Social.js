@@ -5,3 +5,9 @@ export {
     Networks,
     Share
 }
+
+
+export default {
+    Networks,
+    Share
+}
