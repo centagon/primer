@@ -1,5 +1,11 @@
 {
-  "private": true,
+  "name" : "centagon-primer",
+  "version" : "0.1.14",
+  "authors": [
+    "Jelle Spekken <jelle@centagon.com>",
+    "Joeri Kassenaar <joeri@centagon.com>",
+    "Rene Heijnemans <rene@centagon.com>"
+  ],
   "scripts": {
     "prod": "gulp --production",
     "dev": "gulp watch"
@@ -11,5 +17,6 @@
     "laravel-elixir-rollup-official": "^1.0.2",
     "laravel-elixir-webpack-official": "^1.0.6",
     "lodash": "^4.15.0"
-  }
+  },
+  "main":"src/js/index.js"
 }
