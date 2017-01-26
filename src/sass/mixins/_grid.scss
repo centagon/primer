@@ -10,6 +10,11 @@
     .#{$type}-push-#{$size} {
         @include push($size);
     }
+
+    .#{$type}-pull-0,
+    .#{$type}-push-0 {
+        margin-left: 0;
+    }
 }
 
 @mixin breakpoint($name) {
