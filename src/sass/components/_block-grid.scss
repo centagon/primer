@@ -1,0 +1,26 @@
+[class*='block-grid-'] {
+    @include container;
+
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+    padding: 0;
+
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+    }
+
+    & > li {
+        float: left;
+        height: auto;
+        padding: rem-calc(0 $global-padding $global-padding);
+    }
+}
+
+@for $i from 1 through susy-get('columns') {
+    .block-grid-#{$i} > li {
+        width: 100% / $i;
+    }
+}
