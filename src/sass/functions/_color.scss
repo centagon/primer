@@ -13,12 +13,6 @@
         @return map-get(color-get($color), $variant);
     }
 
-    // When no variant is given but the resulting color is
-    // a map than we'll return the _default for that color.
-    @if $variant == false and type-of(map-get($colors, $color)) == map {
-        @return map-get(map-get($colors, $color), _default);
-    }
-
     // If the color is found in the $colors map or in
     // the varient colors map then we'll return it.
     @if map-has-key($colors, $color) {
