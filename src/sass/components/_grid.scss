@@ -10,6 +10,9 @@
         @if $grid-container-limit != false {
             max-width: rem-calc($grid-container-limit);
         }
+
+        &.collapse-top { padding-top: 0; }
+        &.collapse-bottom { padding-bottom: 0; }
     }
 
     .row {
