@@ -17,7 +17,7 @@
     $str: '';
 
     @each $key, $value in $map {
-        $str: $str + $key + '=' + ($value) + '&';
+        $str: $str + $key + '=' + nth($value, 1) + '&';
     }
 
     $str: str-slice($str, 1, -2);

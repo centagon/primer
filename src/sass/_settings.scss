@@ -45,8 +45,8 @@ $grid-container-limit: 1500px !default;
 ///
 /// @type Map
 $breakpoints: (
-    small: 0,
-    medium: 40em,
+    small: 0 39.9em,
+    medium: 40em 63.9em,
     large: 64em,
 ) !default;
 

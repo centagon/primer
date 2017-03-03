@@ -33,7 +33,7 @@
     }
 
     @each $breakpoint, $value in $breakpoints {
-        @include susy-media($value) {
+        @include susy-media(nth($value, 1)) {
             @for $i from 1 through susy-get('columns') {
                 @include make-column($breakpoint, $i);
             }
