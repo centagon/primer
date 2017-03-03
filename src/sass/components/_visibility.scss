@@ -4,9 +4,8 @@
 
 @each $breakpoint, $value in $breakpoints {
     @include susy-media($value) {
-        .#{$breakpoint}-hidden {
-            display: none;
-        }
+        .#{$breakpoint}-hidden { display: none; }
+        .#{$breakpoint}-visible { display: block; }
     }
 }
 
