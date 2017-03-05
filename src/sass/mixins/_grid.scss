@@ -18,7 +18,17 @@
 }
 
 @mixin breakpoint($name) {
-    @include susy-media(map-get($breakpoints, $name)) {
+    $breakpoint: map-get($breakpoints, nth($name, 1));
+
+    // If the user provided a second argument (up, down)
+    // we'll try to parse that argument.
+    @if type-of($name) == list {
+        @if nth($name, 2) == "up" {
+            $breakpoint: nth($breakpoint, 1);
+        }
+    }
+
+    @include susy-media($breakpoint) {
         @content;
     }
 }
