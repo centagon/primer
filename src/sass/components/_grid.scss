@@ -35,6 +35,21 @@
     @each $breakpoint, $value in $breakpoints {
         @include susy-media(nth($value, 1)) {
             @for $i from 1 through susy-get('columns') {
+
+                // Collapse the row.
+                .row.#{$breakpoint}-collapse {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                // Uncollapse the row, effectively adds back
+                // the previously removed left and right
+                // negative margins set by the .row
+                .row.#{$breakpoint}-uncollapse {
+                    margin-left: - rem-calc($global-margin);
+                    margin-right: - rem-calc($global-margin);
+                }
+
                 @include make-column($breakpoint, $i);
             }
         }
