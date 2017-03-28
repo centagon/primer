@@ -40,6 +40,11 @@
                 .row.#{$breakpoint}-collapse {
                     margin-left: 0;
                     margin-right: 0;
+
+                    > [class*='#{$breakpoint}-'] {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
                 }
 
                 // Uncollapse the row, effectively adds back
@@ -48,6 +53,13 @@
                 .row.#{$breakpoint}-uncollapse {
                     margin-left: - rem-calc($global-margin);
                     margin-right: - rem-calc($global-margin);
+
+                    > [class*='#{$breakpoint}-'] {
+                        $gutters: get-gutters(12);
+
+                        padding-right: map-get($gutters, before);
+                        padding-left: map-get($gutters, after);
+                    }
                 }
 
                 @include make-column($breakpoint, $i);
