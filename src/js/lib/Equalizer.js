@@ -51,6 +51,11 @@ export default class Equalizer {
 
         _each(elements, element => {
             const group = element.getAttribute('data-equalize') || 'global';
+            const dimension = element.getAttribute('data-dimension') || 'height';
+
+            if (dimension !== 'width' && dimension !== 'height') {
+                throw Error(`${dimension} is not a valid equalization attribute. Try width or height`);
+            }
 
             // Check the visibility of the element. Invisible elements do
             // not consume any space in the document so we cannot
@@ -65,17 +70,19 @@ export default class Equalizer {
                     order.unshift(group);
                 }
 
-                groups[group].push(element);
+                groups[group].push({ element, dimension });
             }
         });
 
         // Calculate the max height of the elements for each group.
         // Then apply that height to every element in the group.
         order.forEach(group => {
-            const max = Math.max.apply(null, groups[group].map(element => element.offsetHeight));
+            const max = Math.max.apply(null, groups[group].map(item => {
+                return item.element[item.dimension === 'height' ? 'offsetHeight' : 'offsetWidth'];
+            }));
 
-            groups[group].forEach(element => {
-                element.style.height = `${max}px`;
+            groups[group].forEach(item => {
+                item.element.style[item.dimension] = `${max}px`;
             });
         });
 
