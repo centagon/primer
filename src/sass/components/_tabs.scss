@@ -28,5 +28,24 @@
         &:last-child a {
             margin-right: auto;
         }
+
+        @include modifier(is-active) {
+            a {
+                color: $tab-hover-font-color;
+                background-color: $tab-hover-background-color;
+            }
+        }
+    }
+}
+
+.tabs-content {
+    margin-top: -1px;
+
+    @include element(panel) {
+        @extend .panel;
+
+        &:not(.tabs-content__panel--active) {
+            display: none;
+        }
     }
 }
